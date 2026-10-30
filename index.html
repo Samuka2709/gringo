@@ -404,6 +404,15 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
 @media (min-width:768px){.rodape__grade{grid-template-columns:1.2fr 1fr 1.2fr}}
 @media (min-width:960px){.rodape{padding-bottom:var(--esp-4)}}
 
+/* ---------- Folhas espalhadas ---------- */
+.espalhada{width:clamp(170px,22vw,320px);color:var(--creme);opacity:.06}
+.creme>.espalhada{color:var(--verde);opacity:.07}
+.espalhada~.container{position:relative}
+.f-topo-esq{left:-70px;top:4%;transform:rotate(22deg)}
+.f-topo-dir{right:-70px;top:5%;transform:scaleX(-1) rotate(18deg)}
+.f-base-esq{left:-60px;bottom:3%;transform:rotate(152deg)}
+.f-base-dir{right:-60px;bottom:4%;transform:rotate(200deg)}
+
 /* ---------- Botão flutuante ---------- */
 .flutuante{transition:transform var(--transicao);position:fixed;right:16px;bottom:max(16px,env(safe-area-inset-bottom));z-index:40;display:inline-flex;align-items:center;gap:.5rem;min-height:54px;padding:.5rem 1.25rem .5rem 1rem;border-radius:999px;background:var(--mostarda);color:var(--preto);font-weight:600;text-decoration:none;box-shadow:0 6px 20px rgba(20,20,20,.3)}
 .flutuante:focus-visible{outline-color:var(--preto);box-shadow:0 0 0 3px var(--creme)}
@@ -536,6 +545,8 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
   </section>
 
   <section class="secao creme" id="momentos" aria-labelledby="momentos-titulo">
+    <svg class="folha espalhada f-topo-dir" viewBox="0 0 200 246" aria-hidden="true" focusable="false"><use href="#costela"/></svg>
+    <svg class="folha espalhada f-base-esq" viewBox="-6 -20 264 260" aria-hidden="true" focusable="false"><use href="#palmeira"/></svg>
     <div class="container">
       <div class="momentos__topo reveal">
         <h2 id="momentos-titulo">Um dia, três <em>desculpas</em></h2>
@@ -571,6 +582,8 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
 
   <section class="secao creme cardapio" id="cardapio" aria-labelledby="cardapio-titulo">
     <svg class="folha cardapio__folha" viewBox="0 0 200 246" aria-hidden="true" focusable="false"><use href="#costela"/></svg>
+    <svg class="folha espalhada f-base-esq" viewBox="-6 -20 264 260" aria-hidden="true" focusable="false"><use href="#palmeira"/></svg>
+    <svg class="folha espalhada f-topo-dir" viewBox="0 0 200 246" aria-hidden="true" focusable="false"><use href="#costela"/></svg>
     <div class="container">
       <div class="cardapio__topo reveal">
         <h2 id="cardapio-titulo">Cardápio. <em>Leia com calma, peça sem culpa.</em></h2>
@@ -824,6 +837,7 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
   </div>
   <section class="secao verde rodizio" id="rodizio" aria-labelledby="rodizio-titulo">
     <svg class="folha rodizio__folha" viewBox="-6 -20 264 260" aria-hidden="true" focusable="false"><use href="#palmeira"/></svg>
+    <svg class="folha espalhada f-base-esq" viewBox="0 0 200 246" aria-hidden="true" focusable="false"><use href="#costela"/></svg>
     <div class="container rodizio__grade">
       <div class="reveal">
         <h2 id="rodizio-titulo">Vocês têm rodízio? <em>Agora sim!</em></h2>
@@ -847,6 +861,7 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
 
   <section class="secao creme bambini" id="bambini" aria-labelledby="bambini-titulo">
     <svg class="folha bambini__folha" viewBox="0 0 200 246" aria-hidden="true" focusable="false"><use href="#costela"/></svg>
+    <svg class="folha espalhada f-base-esq" viewBox="-6 -20 264 260" aria-hidden="true" focusable="false"><use href="#palmeira"/></svg>
     <div class="container bambini__grade">
       <div class="bambini__fotos reveal">
         <div class="foto foto--madeira" style="--ar:4/3">
@@ -883,6 +898,7 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
 
   <section class="secao noite historias" id="drinks" aria-labelledby="drinks-titulo">
     <div class="historias__palco">
+      <svg class="folha espalhada f-topo-dir" viewBox="-6 -20 264 260" aria-hidden="true" focusable="false"><use href="#palmeira"/></svg>
     <div class="container historias__topo reveal">
       <div>
         <h2 id="drinks-titulo">Histórias que nós <em>servimos</em></h2>
@@ -943,6 +959,8 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
   </section>
 
   <section class="secao creme prova" id="prova" aria-labelledby="prova-titulo">
+    <svg class="folha espalhada f-topo-esq" viewBox="-6 -20 264 260" aria-hidden="true" focusable="false"><use href="#palmeira"/></svg>
+    <svg class="folha espalhada f-base-dir" viewBox="0 0 200 246" aria-hidden="true" focusable="false"><use href="#costela"/></svg>
     <div class="container">
       <div class="reveal">
         <h2 id="prova-titulo">Mais de <em>15 mil</em> pessoas acompanham a casa</h2>
@@ -970,6 +988,8 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
   </section>
 
   <section class="secao verde unidades" id="unidades" aria-labelledby="unidades-titulo">
+    <svg class="folha espalhada f-topo-dir" viewBox="0 0 200 246" aria-hidden="true" focusable="false"><use href="#costela"/></svg>
+    <svg class="folha espalhada f-base-esq" viewBox="-6 -20 264 260" aria-hidden="true" focusable="false"><use href="#palmeira"/></svg>
     <div class="container">
       <div class="unidades__topo reveal">
         <h2 id="unidades-titulo">Duas casas. <em>Escolha a mais perto da sua fome.</em></h2>
@@ -1015,6 +1035,7 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
 </main>
 
 <footer class="verde rodape">
+  <svg class="folha espalhada f-topo-dir" viewBox="-6 -20 264 260" aria-hidden="true" focusable="false"><use href="#palmeira"/></svg>
   <div class="rodape__faixa" aria-hidden="true"></div>
   <div class="container">
     <div class="rodape__grade">
