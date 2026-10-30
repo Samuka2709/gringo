@@ -1,0 +1,1615 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pizzaria e café em Ilhéus: Pizza, Caffè e Almoço</title>
+<meta name="description" content="Pizzaria e café em Ilhéus, Bahia. Pizza, Caffè e Almoço nas unidades Casa Centro e Casa Sul, com rodízio, área kids e drinks autorais.">
+<meta name="theme-color" content="#1F3B2A">
+
+<!-- Quando o site tiver domínio, descomente e preencha:
+<link rel="canonical" href="[URL DO SITE]">
+-->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Pizzaria e café em Ilhéus">
+<meta property="og:title" content="Pizzaria e café em Ilhéus">
+<meta property="og:description" content="Pizza, Caffè e Almoço em Ilhéus. Duas casas, rodízio de pizza, espaço Bambini e drinks autorais.">
+<meta property="og:url" content="[URL DO SITE]">
+<meta property="og:image" content="[URL DO SITE]/img/og.jpg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='3' fill='%23F2EBDD'/%3E%3Crect x='2.5' y='2.5' width='27' height='27' fill='none' stroke='%233B4FBF'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' text-anchor='middle' fill='%233B4FBF'%3EP%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500;600&display=swap"></noscript>
+
+<link rel="preload" as="image" href="img/hero-m.webp" type="image/webp" media="(max-width:959px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero.webp" type="image/webp" media="(min-width:960px)" fetchpriority="high">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "#casa",
+      "name": "Pizza, Caffè e Almoço",
+      "slogan": "Pizza, Caffè e Almoço",
+      "url": "[URL DO SITE]",
+      "sameAs": ["https://www.instagram.com/gringa.casa/"]
+    },
+    {
+      "@type": "Restaurant",
+      "name": "Casa Centro",
+      "parentOrganization": { "@id": "#casa" },
+      "servesCuisine": ["Pizza", "Café"],
+      "url": "[URL DO SITE]",
+      "telephone": "[TELEFONE CASA CENTRO]",
+      "openingHours": "[HORÁRIO CASA CENTRO]",
+      "priceRange": "[FAIXA DE PREÇO]",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "[ENDEREÇO CASA CENTRO]",
+        "addressLocality": "Ilhéus",
+        "addressRegion": "BA",
+        "addressCountry": "BR"
+      }
+    },
+    {
+      "@type": "Restaurant",
+      "name": "Casa Sul",
+      "parentOrganization": { "@id": "#casa" },
+      "servesCuisine": ["Pizza", "Café"],
+      "url": "[URL DO SITE]",
+      "telephone": "[TELEFONE CASA SUL]",
+      "openingHours": "[HORÁRIO CASA SUL]",
+      "priceRange": "[FAIXA DE PREÇO]",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "[ENDEREÇO CASA SUL]",
+        "addressLocality": "Ilhéus",
+        "addressRegion": "BA",
+        "addressCountry": "BR"
+      }
+    }
+  ]
+}
+</script>
+
+<script>document.documentElement.classList.add('js')</script>
+
+<style>
+/* ---------- Tokens ---------- */
+:root{
+  --verde:#1F3B2A;
+  --verde-claro:#2A4C37;
+  --creme:#F2EBDD;
+  --creme-fundo:#E8DEC9;
+  --preto:#141414;
+  --preto-claro:#262626;
+  --mostarda:#E3B23C;
+  --azul:#3B4FBF;
+  --madeira:#A9744F;
+  --madeira-clara:#B07C57;
+  --madeira-escura:#9E6B48;
+  --madeira-media:#A06E4A;
+  --papel:#FBF7EE;
+  --linha:rgba(169,116,79,.35);
+  --linha-forte:rgba(169,116,79,.5);
+  --destaque-item:rgba(232,222,201,.75);
+
+  --texto-suave-claro:#46504A;
+  --texto-suave-escuro:#D6CFC0;
+
+  --font-titulo:'Fraunces',Georgia,'Times New Roman',serif;
+  --font-corpo:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --font-mao:'Caveat','Segoe Print',cursive;
+
+  --gutter:clamp(20px,5vw,72px);
+  --largura:1240px;
+  --secao:clamp(72px,11vw,148px);
+  --esp-1:.5rem;
+  --esp-2:1rem;
+  --esp-3:1.5rem;
+  --esp-4:2.5rem;
+  --esp-5:4rem;
+
+  --header:72px;
+  --sombra:0 10px 28px rgba(20,20,20,.16);
+  --ease:cubic-bezier(.23,1,.32,1);
+  --transicao:200ms var(--ease);
+
+  --azulejo:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='%233B4FBF' stroke-width='1.6'%3E%3Cpath d='M0 0h72v72H0z' stroke-width='1'/%3E%3Cpath d='M0 18A18 18 0 0 0 18 0M54 0a18 18 0 0 0 18 18M72 54a18 18 0 0 0-18 18M18 72A18 18 0 0 0 0 54'/%3E%3Cpath d='M36 10c7 8 7 16 0 26-7-10-7-18 0-26zM62 36c-8 7-16 7-26 0 10-7 18-7 26 0zM36 62c-7-8-7-16 0-26 7 10 7 18 0 26zM10 36c8-7 16-7 26 0-10 7-18 7-26 0z'/%3E%3Cpath d='M36 22l14 14-14 14-14-14z' stroke-width='1'/%3E%3C/g%3E%3Ccircle cx='36' cy='36' r='3' fill='%233B4FBF'/%3E%3C/svg%3E");
+  --grao:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .25 0 0 0 0 .2 0 0 0 0 .12 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23g)' opacity='.2'/%3E%3C/svg%3E");
+}
+
+/* ---------- Base ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--header) + 12px);scrollbar-color:var(--verde) var(--creme);touch-action:manipulation}
+::selection{background:var(--mostarda);color:var(--preto)}
+body{margin:0;background:var(--creme);color:var(--preto);font:400 1rem/1.6 var(--font-corpo);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,p,ul,ol,figure,blockquote{margin:0;padding:0}
+ul,ol{list-style:none}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+h1,h2,h3,h4{font-family:var(--font-titulo);font-weight:400;line-height:1.06;letter-spacing:-.015em;text-wrap:balance}
+h1 em,h2 em{font-weight:300}
+h2{font-size:clamp(2.25rem,1.45rem + 3.7vw,4.5rem)}
+h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
+:focus-visible{outline:3px solid var(--foco,var(--verde));outline-offset:3px;border-radius:2px}
+
+.container{width:min(100% - 2*var(--gutter),var(--largura));margin-inline:auto}
+.secao{position:relative;padding-block:var(--secao);overflow-x:clip;content-visibility:auto;contain-intrinsic-size:auto 1100px}
+.pronto .secao{content-visibility:visible}
+.creme{--foco:var(--verde);background:var(--creme) var(--grao);color:var(--preto)}
+.verde{--foco:var(--mostarda);background:var(--verde);color:var(--creme)}
+.noite{--foco:var(--mostarda);background:var(--preto);color:var(--creme)}
+
+.sr{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.pular{position:fixed;top:8px;left:8px;z-index:100;padding:.75rem 1rem;background:var(--creme);color:var(--preto);transform:translateY(-200%)}
+.pular:focus{transform:none}
+
+.mao{font-family:var(--font-mao);font-weight:500;font-size:clamp(1.5rem,1.3rem + .8vw,1.875rem);line-height:1.15}
+.lead{font-size:clamp(1.0625rem,1rem + .3vw,1.25rem);line-height:1.55;max-width:34em}
+.creme .lead{color:var(--texto-suave-claro)}
+.verde .lead,.noite .lead{color:var(--texto-suave-escuro)}
+.ph{border-bottom:1px dashed currentColor}
+.link{font-weight:600;text-decoration:underline;text-decoration-color:var(--mostarda);text-decoration-thickness:2px;text-underline-offset:.32em;transition:text-underline-offset var(--transicao)}
+.madeira{height:6px;background:repeating-linear-gradient(90deg,var(--madeira) 0 38px,var(--madeira-escura) 38px 66px,var(--madeira-clara) 66px 112px,var(--madeira-media) 112px 150px)}
+
+.folha{position:absolute;pointer-events:none;fill:currentColor}
+
+/* ---------- Botões ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:50px;padding:.75rem 1.5rem;border-radius:999px;border:1.5px solid transparent;font-weight:600;font-size:1rem;line-height:1.2;text-decoration:none;text-align:center;transition:transform var(--transicao),box-shadow var(--transicao),background-color var(--transicao)}
+.btn--primario{background:var(--mostarda);color:var(--preto)}
+.btn--contorno{border-color:currentColor}
+@media (hover:hover){
+  .btn:hover{transform:scale(1.02);box-shadow:var(--sombra)}
+  .card:hover{transform:scale(1.02);box-shadow:var(--sombra)}
+  .link:hover{text-underline-offset:.45em}
+  .aba:hover{color:var(--preto)}
+  .carrossel__botao:not(:disabled):hover{border-color:var(--mostarda);transform:scale(1.02)}
+}
+.btn:active,.flutuante:active,.carrossel__botao:not(:disabled):active{transform:scale(.97);transition-duration:100ms}
+
+/* ---------- Fotos (placeholder pronto para troca) ---------- */
+.foto{--f1:var(--verde-claro);position:relative;isolation:isolate;overflow:hidden;aspect-ratio:var(--ar,4/3);background:var(--f1);color:var(--creme)}
+.foto img{position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:cover}
+.foto__legenda{position:absolute;left:14px;right:14px;bottom:12px;font-size:.8125rem;line-height:1.4}
+.foto--madeira{--f1:var(--madeira-clara);color:var(--preto)}
+.foto--noite{--f1:var(--preto-claro);color:var(--creme)}
+
+/* ---------- Logo ---------- */
+.logo{display:inline-flex;align-items:center;padding:.5rem .55rem .5rem .75rem;background:var(--creme);color:var(--azul);font:600 1.1875rem/1 var(--font-titulo);letter-spacing:.16em;text-decoration:none;border-radius:2px;box-shadow:inset 0 0 0 2px var(--creme),inset 0 0 0 3px var(--azul)}
+
+/* ---------- Header ---------- */
+.site-header{position:fixed;inset:0 0 auto;z-index:50;--foco:var(--mostarda);color:var(--creme);transition:background-color var(--transicao),box-shadow var(--transicao)}
+.site-header::before{content:"";position:absolute;inset:0 0 -32px;z-index:-1;background:linear-gradient(rgba(20,20,20,.72),rgba(20,20,20,0));pointer-events:none;transition:opacity var(--transicao)}
+.site-header.solido{background:var(--verde);box-shadow:0 1px 0 rgba(242,235,221,.14)}
+.site-header.solido::before{opacity:0}
+.site-header__barra{display:flex;align-items:center;justify-content:space-between;gap:var(--esp-3);height:var(--header)}
+.site-nav__lista{display:flex;flex-direction:column;gap:var(--esp-1)}
+.site-nav a:not(.btn){display:block;text-decoration:none}
+
+.menu-btn{position:relative;z-index:2;display:grid;place-items:center;width:48px;height:48px;margin-right:-10px}
+.menu-btn span,.menu-btn span::before,.menu-btn span::after{display:block;width:24px;height:2px;background:currentColor;transition:transform var(--transicao),background-color var(--transicao)}
+.menu-btn span{position:relative}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0}
+.menu-btn span::before{top:-7px}
+.menu-btn span::after{top:7px}
+.menu-aberto .menu-btn span{background:transparent}
+.menu-aberto .menu-btn span::before{transform:translateY(7px) rotate(45deg)}
+.menu-aberto .menu-btn span::after{transform:translateY(-7px) rotate(-45deg)}
+
+.logo{position:relative;z-index:2}
+.site-nav{position:fixed;inset:0;z-index:1;display:flex;flex-direction:column;justify-content:center;gap:var(--esp-4);padding:calc(var(--header) + 16px) var(--gutter) var(--esp-4);background:var(--verde);visibility:hidden;opacity:0;transition:opacity var(--transicao),visibility var(--transicao)}
+.site-nav .site-nav__lista a{padding:.35rem 0;font-family:var(--font-titulo);font-size:clamp(2rem,9vw,2.75rem);line-height:1.2}
+.menu-aberto{overflow:hidden}
+.menu-aberto .site-nav{visibility:visible;opacity:1}
+
+@media (min-width:960px){
+  .menu-btn{display:none}
+  .site-nav{position:static;flex-direction:row;align-items:center;gap:var(--esp-4);padding:0;background:none;visibility:visible;opacity:1;transition:none}
+  .site-nav__lista{flex-direction:row;gap:clamp(1.25rem,2.4vw,2.25rem)}
+  .site-nav .site-nav__lista a{padding:.5rem 0;font-family:var(--font-corpo);font-size:.9375rem;font-weight:500;background:linear-gradient(var(--mostarda),var(--mostarda)) 0 100%/0 2px no-repeat;transition:background-size var(--transicao)}
+  .site-nav .site-nav__lista a[aria-current]{background-size:100% 2px}
+  @media (hover:hover){.site-nav .site-nav__lista a:hover{background-size:100% 2px}}
+  .site-nav .btn{min-height:44px;padding:.5rem 1.25rem;font-size:.9375rem}
+}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;display:flex;flex-direction:column;min-height:100vh;min-height:100svh;overflow:hidden}
+.hero__foto{order:-1;flex:1 1 auto;min-height:230px;aspect-ratio:auto}
+.hero__texto{position:relative;padding:var(--esp-4) var(--gutter) 96px}
+.hero__folha{right:-70px;bottom:-60px;width:260px;color:var(--creme);opacity:.05;transform:rotate(-24deg)}
+.hero h1{position:relative;font-size:clamp(2.75rem,1.6rem + 6.2vw,6rem);line-height:1}
+.hero h1 em{color:var(--mostarda)}
+.hero__sub{position:relative;margin-top:var(--esp-2);font-size:clamp(1.0625rem,1rem + .4vw,1.3125rem)}
+.hero__acoes{position:relative;display:flex;flex-wrap:wrap;gap:.75rem;margin-top:var(--esp-3)}
+.hero__acoes .btn{flex:1 1 auto;padding-inline:1rem}
+
+@media (min-width:960px),(orientation:landscape) and (max-height:520px){
+  .hero{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);align-items:stretch}
+  .hero__foto{order:0;min-height:100%}
+    .hero__texto{display:flex;flex-direction:column;justify-content:flex-end;padding:calc(var(--header) + 48px) clamp(32px,4vw,64px) clamp(56px,7vw,96px) max(var(--gutter),calc((100vw - var(--largura))/2))}
+  .hero__acoes .btn{flex:0 1 auto;padding-inline:1.5rem}
+  .hero__folha{width:380px;right:-90px;bottom:-110px}
+}
+
+/* ---------- Três momentos ---------- */
+.momentos__topo{margin-bottom:clamp(2.5rem,6vw,4.5rem)}
+.momentos__lista{display:grid;gap:var(--esp-4)}
+.momento{position:relative}
+.momento .foto{--ar:4/3;margin-bottom:var(--esp-2);transition:transform var(--transicao),box-shadow var(--transicao)}
+.momento p{margin:.4rem 0 .75rem;color:var(--texto-suave-claro);max-width:30em}
+.momento .link::after{content:"";position:absolute;inset:0}
+@media (hover:hover){.momento:hover .foto{transform:scale(1.02);box-shadow:var(--sombra)}}
+@media (min-width:768px){
+  .momentos__lista{grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,44px)}
+  .momento .foto{--ar:4/5}
+  .momento:nth-child(2){margin-top:64px}
+  .momento:nth-child(3){margin-top:24px}
+}
+
+/* ---------- Cardápio ---------- */
+.cardapio{padding-top:0}
+.cardapio__folha{left:-96px;top:30%;width:300px;color:var(--verde);opacity:.05;transform:rotate(28deg)}
+.cardapio__topo{position:relative;margin-bottom:var(--esp-4)}
+.cardapio__aviso{position:relative;margin-bottom:var(--esp-3);font-size:.875rem;color:var(--texto-suave-claro);max-width:44em}
+.abas{position:relative;display:flex;flex-wrap:wrap;gap:.125rem clamp(1rem,2.4vw,2rem);margin-bottom:var(--esp-3);border-bottom:1px solid var(--linha-forte)}
+.aba{min-height:48px;padding:.5rem 0;margin-bottom:-1px;border-bottom:3px solid transparent;font-family:var(--font-titulo);font-size:clamp(1.0625rem,1rem + .35vw,1.3125rem);color:var(--texto-suave-claro);transition:color var(--transicao)}
+.aba[aria-selected="true"]{color:var(--preto);font-style:italic;border-bottom-color:var(--mostarda)}
+.js .aba[aria-selected="true"]{border-bottom-color:transparent}
+.abas__marca{position:absolute;top:0;left:0;width:1px;height:3px;background:var(--mostarda);transform-origin:0 0;pointer-events:none}
+.abas.animada .abas__marca{transition:transform 420ms var(--ease)}
+
+.cardapio__corpo{position:relative;display:grid;gap:var(--esp-4)}
+.cardapio__preview{display:none}
+.cardapio__dica{display:none;font-weight:500;color:var(--preto)}
+.js .cardapio__dica{display:inline}
+.qtd{flex:none;display:inline-flex;align-items:center;margin-left:auto}
+.qtd__btn{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;color:var(--verde);transition:transform var(--transicao)}
+.qtd__btn svg{width:30px;height:30px;padding:7px;border:1.5px solid currentColor;border-radius:50%;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;transition:background-color var(--transicao),color var(--transicao)}
+.qtd__mais svg{background:var(--verde);border-color:var(--verde);stroke:var(--creme)}
+.qtd__btn:active{transform:scale(.9);transition-duration:100ms}
+.qtd__n{min-width:1.5rem;text-align:center;font-weight:600;font-variant-numeric:tabular-nums}
+.qtd:not(.ativo) .qtd__menos,.qtd:not(.ativo) .qtd__n{display:none}
+.item{display:flex;flex-wrap:wrap;align-items:center;gap:.25rem .875rem;padding:.875rem .25rem;border-bottom:1px solid var(--linha);border-radius:2px;transition:background-color var(--transicao)}
+.item__mini{flex:none;width:72px;height:72px;object-fit:cover;border-radius:2px;background:var(--creme-fundo)}
+.item__texto{flex:1 1 150px;min-width:0}
+.item__linha{display:flex;align-items:baseline;justify-content:space-between;gap:var(--esp-2)}
+.item__nome{font-size:clamp(1.25rem,1.15rem + .5vw,1.5rem);line-height:1.2;letter-spacing:-.01em}
+.item__preco{flex:none;font-size:.9375rem;font-weight:500;font-variant-numeric:tabular-nums}
+.item__desc{margin-top:.2rem;color:var(--texto-suave-claro);font-size:.9375rem;max-width:36em}
+@media (min-width:960px){
+  .cardapio__corpo{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(2.5rem,6vw,5rem);align-items:start}
+  .cardapio__preview{display:block;position:sticky;top:calc(var(--header) + 24px)}
+  .cardapio__preview .foto{--ar:4/5;max-height:calc(100vh - var(--header) - 48px)}
+  #preview img{opacity:0;transform:scale(1.04);transition:opacity 0ms linear 300ms,transform 0ms linear 300ms}
+  #preview img.ativa{z-index:2;opacity:1;transform:none;transition:opacity 300ms ease-out,transform 640ms var(--ease)}
+  #preview.vazia img{transition:opacity 200ms ease-out}
+  .item{padding:1.05rem .75rem}
+  .item__mini{display:none}
+  .qtd{min-width:112px;justify-content:flex-end}
+  .item:hover,.item:focus-visible{background:var(--destaque-item)}
+  .item:hover .item__nome,.item:focus-visible .item__nome{font-style:italic}
+}
+
+/* ---------- Rodízio ---------- */
+.rodizio{padding-block:clamp(64px,9vw,120px)}
+.rodizio__foto{--ar:16/10}
+@media (min-width:768px){.rodizio__foto{--ar:5/2}}
+.rodizio__folha{right:-70px;top:-30px;width:clamp(260px,34vw,460px);color:var(--creme);opacity:.05}
+.rodizio__grade{position:relative;display:grid;gap:var(--esp-4)}
+.rodizio h2{font-size:clamp(2.5rem,1.5rem + 4.6vw,5.25rem)}
+.rodizio h2 em{display:block;color:var(--mostarda)}
+.rodizio .mao{margin-top:var(--esp-2);color:var(--texto-suave-escuro)}
+.preco{display:flex;align-items:flex-start;gap:.35rem;font-family:var(--font-titulo);font-size:clamp(5.5rem,3.5rem + 9vw,8.5rem);font-weight:300;line-height:.86;letter-spacing:-.03em}
+.preco__moeda{font-size:.3em;line-height:1;letter-spacing:0;padding-top:.32em}
+.preco__nota{margin-top:var(--esp-2);padding-bottom:.55rem;border-bottom:2px solid var(--mostarda);font-weight:600}
+.condicoes{margin-block:var(--esp-2) var(--esp-3);font-size:.9375rem;color:var(--texto-suave-escuro)}
+.condicoes li{padding-block:.3rem}
+@media (min-width:900px){
+  .rodizio__grade{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:var(--esp-5);align-items:end}
+}
+
+/* ---------- Bambini ---------- */
+.bambini__folha{right:-80px;top:-40px;width:300px;color:var(--verde);opacity:.06;transform:scaleX(-1) rotate(-14deg)}
+.bambini__grade{position:relative;display:grid;gap:var(--esp-5)}
+.bambini__fotos{position:relative}
+.bambini__fotos>.foto{--ar:4/3}
+.bambini__fotos .foto__legenda{top:12px;bottom:auto}
+.bambini h2{margin-bottom:var(--esp-2)}
+.frentes{display:grid;gap:var(--esp-3);margin-block:var(--esp-3)}
+.frentes h3{margin-bottom:.25rem}
+.frentes p{color:var(--texto-suave-claro)}
+.certificado{position:relative;z-index:2;width:min(84%,300px);margin:-56px 0 0 auto;background:var(--papel);box-shadow:var(--sombra);transform:rotate(-1.75deg)}
+.certificado::before{content:"";display:block;height:36px;background:var(--creme) var(--azulejo) 0 0/36px 36px}
+.certificado__corpo{padding:.875rem 1rem 1rem;color:var(--preto)}
+.certificado__selo{font-size:.6875rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.certificado__titulo{margin-block:.25rem;font-family:var(--font-titulo);font-size:1.3125rem;line-height:1.2}
+.certificado__nota{margin-top:.5rem;font-size:.75rem;color:var(--texto-suave-claro)}
+.bambini__oficina{--ar:3/2}
+@media (min-width:900px){
+  .bambini__grade{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(3rem,7vw,6rem);align-items:start}
+  .certificado{position:absolute;right:-28px;bottom:-44px;margin:0}
+}
+
+/* ---------- Histórias que nós servimos ---------- */
+.historias__topo{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:var(--esp-3);margin-bottom:var(--esp-4)}
+.historias .lead{margin-top:var(--esp-2)}
+.carrossel__botoes{display:flex;gap:.5rem}
+.carrossel__botao{display:grid;place-items:center;width:50px;height:50px;border:1.5px solid rgba(242,235,221,.5);border-radius:50%;transition:transform var(--transicao),opacity var(--transicao),border-color var(--transicao)}
+.carrossel__botao:disabled{opacity:.35;cursor:default}
+.trilho{--borda:max(var(--gutter),calc((100% - var(--largura))/2));display:flex;gap:clamp(16px,2.4vw,28px);padding-inline:var(--borda);padding-block:.5rem 1.25rem;overflow-x:auto;scroll-snap-type:x proximity;scroll-padding-inline:var(--borda);scrollbar-width:thin;scrollbar-color:var(--madeira) var(--preto-claro);-webkit-overflow-scrolling:touch}
+@media (hover:hover) and (pointer:fine){.trilho{cursor:grab}}
+.trilho.arrastando{cursor:grabbing;scroll-snap-type:none;user-select:none}
+
+/* Palco fixo: a rolagem vertical leva as fotos para o lado */
+#drinks{content-visibility:visible;scroll-margin-top:calc(-1*(var(--header) + 12px))}
+.historias__progresso{display:none}
+.fixar.historias{padding-block:0}
+.fixar .historias__palco{position:sticky;top:0;display:flex;flex-direction:column;justify-content:center;height:100vh;height:100svh;padding-top:calc(var(--header) + 12px);overflow:hidden}
+.fixar .historias__topo{margin-bottom:var(--esp-3)}
+.fixar .carrossel__botoes{display:none}
+.fixar .trilho{overflow:visible;padding-block:0;cursor:auto;will-change:transform}
+.fixar .drink{flex-basis:min(70vw,calc(44vh*.75))}
+.fixar .drink .foto{aspect-ratio:auto;height:44vh}
+.fixar .historias__progresso{display:block;flex:none;width:min(100% - 2*var(--gutter),var(--largura));height:2px;margin:var(--esp-2) auto 0;background:var(--preto-claro)}
+.historias__progresso span{display:block;height:100%;background:var(--madeira);transform:scaleX(0);transform-origin:left}
+.trilho:focus-visible{outline-offset:-3px}
+.drink{flex:0 0 min(76vw,320px);scroll-snap-align:start}
+.drink .foto{--ar:3/4;margin-bottom:var(--esp-2)}
+.drink__marca{display:block;margin-top:.5rem;font-size:.75rem;font-weight:500;color:var(--mostarda)}
+.drink p{margin-top:.35rem;color:var(--texto-suave-escuro);font-size:.9375rem}
+
+/* ---------- Prova social ---------- */
+.prova h2{font-size:clamp(2.5rem,1.4rem + 5.4vw,6rem);max-width:13em}
+.prova h2 em{color:var(--verde)}
+.prova .lead{margin-top:var(--esp-3)}
+.prova__link{display:inline-block;margin-top:var(--esp-2)}
+.depoimentos{display:grid;gap:var(--esp-3);margin-top:clamp(3rem,7vw,5.5rem)}
+.depoimento{padding-top:var(--esp-2);border-top:1px solid var(--madeira)}
+.depoimento__tag{display:block;margin-bottom:.75rem;font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--texto-suave-claro)}
+.depoimento blockquote{font-family:var(--font-titulo);font-size:1.3125rem;line-height:1.3}
+.depoimento figcaption{margin-top:.75rem;font-size:.875rem;color:var(--texto-suave-claro)}
+@media (min-width:768px){.depoimentos{grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,56px)}}
+
+/* ---------- Unidades ---------- */
+.unidades__topo{position:relative;margin-bottom:var(--esp-4)}
+.unidades .lead{margin-top:var(--esp-2)}
+.unidades__lista{position:relative;display:grid;gap:clamp(20px,3vw,32px)}
+.unidade{--foco:var(--verde);background:var(--creme);color:var(--preto);transition:transform var(--transicao),box-shadow var(--transicao)}
+.unidade .foto{--ar:16/10}
+.unidade__corpo{padding:clamp(1.25rem,3vw,2rem)}
+.unidade__dados{display:grid;gap:.75rem;margin-block:var(--esp-2) var(--esp-3)}
+.unidade__dados dt{font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--texto-suave-claro)}
+.unidade__dados dd{margin:0}
+.unidade__acoes{display:flex;flex-wrap:wrap;gap:.75rem}
+.unidade__acoes .btn{flex:1 1 150px}
+.unidade .btn--contorno{color:var(--verde)}
+@media (min-width:768px){.unidades__lista{grid-template-columns:repeat(2,1fr)}}
+
+/* ---------- Rodapé ---------- */
+.rodape{position:relative;padding-bottom:calc(var(--esp-5) + 40px);overflow:hidden}
+.rodape::before{content:"";position:absolute;inset:72px 0 0;background:var(--azulejo) 0 0/72px 72px;opacity:.22;pointer-events:none}
+.rodape__faixa{height:72px;background:var(--creme) var(--azulejo) 0 0/72px 72px}
+.rodape__grade{position:relative;display:grid;gap:var(--esp-4);padding-top:var(--esp-5)}
+.rodape .mao{margin-top:var(--esp-2);color:var(--mostarda)}
+.rodape h2{margin-bottom:.75rem;font:600 .75rem/1.4 var(--font-corpo);letter-spacing:.14em;text-transform:uppercase}
+.rodape li{padding-block:.2rem}
+.rodape__legal{position:relative;margin-top:var(--esp-5);font-size:.8125rem;color:var(--texto-suave-escuro)}
+@media (min-width:768px){.rodape__grade{grid-template-columns:1.2fr 1fr 1.2fr}}
+@media (min-width:960px){.rodape{padding-bottom:var(--esp-4)}}
+
+/* ---------- Botão flutuante ---------- */
+.flutuante{transition:transform var(--transicao);position:fixed;right:16px;bottom:max(16px,env(safe-area-inset-bottom));z-index:40;display:inline-flex;align-items:center;gap:.5rem;min-height:54px;padding:.5rem 1.25rem .5rem 1rem;border-radius:999px;background:var(--mostarda);color:var(--preto);font-weight:600;text-decoration:none;box-shadow:0 6px 20px rgba(20,20,20,.3)}
+.flutuante:focus-visible{outline-color:var(--preto);box-shadow:0 0 0 3px var(--creme)}
+.flutuante svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linejoin:round}
+@media (min-width:960px){.flutuante{display:none}.flutuante.tem-pedido{display:inline-flex}}
+
+/* ---------- Pedido ---------- */
+.pedido{--foco:var(--verde);--fora:translateY(100%);position:fixed;inset:auto 0 0;width:100%;max-width:none;max-height:min(88dvh,720px);margin:0;padding:0;border:0;border-radius:14px 14px 0 0;background:var(--creme);color:var(--preto);overscroll-behavior:contain;box-shadow:0 -10px 32px rgba(20,20,20,.28)}
+.pedido[open]{display:flex;flex-direction:column;animation:pedido-entra 360ms var(--ease)}
+.pedido.fechando{animation:pedido-sai 180ms ease-in forwards}
+.pedido::backdrop{background:rgba(20,20,20,.55);animation:pedido-fundo 360ms var(--ease)}
+.pedido.fechando::backdrop{opacity:0;transition:opacity 180ms ease-in}
+@keyframes pedido-entra{from{transform:var(--fora)}}
+@keyframes pedido-sai{to{transform:var(--fora)}}
+@keyframes pedido-fundo{from{opacity:0}}
+.pedido__topo{display:flex;align-items:center;justify-content:space-between;gap:var(--esp-2);padding:1rem 1.25rem .75rem;border-bottom:1px solid var(--linha-forte)}
+.pedido__topo h2{font-size:1.75rem}
+.pedido__fechar{display:grid;place-items:center;width:44px;height:44px;margin-right:-.625rem;border-radius:50%}
+.pedido__fechar svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
+.pedido__corpo{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:.25rem 1.25rem 1rem}
+.pedido__vazio{padding-block:var(--esp-3);color:var(--texto-suave-claro)}
+.pedido__linha{display:flex;align-items:center;justify-content:space-between;gap:var(--esp-2);padding-block:.5rem;border-bottom:1px solid var(--linha);font-family:var(--font-titulo);font-size:1.125rem;line-height:1.2}
+.pedido__subtotal{display:block;margin-top:.125rem;font-family:var(--font-corpo);font-size:.875rem;color:var(--texto-suave-claro);font-variant-numeric:tabular-nums}
+.pedido__total{display:flex;align-items:baseline;justify-content:space-between;gap:var(--esp-2);margin-bottom:.25rem;font-weight:600}
+.pedido__total strong{font-family:var(--font-titulo);font-size:1.5rem;font-weight:500;font-variant-numeric:tabular-nums}
+.pedido__casa{min-width:0;margin:var(--esp-3) 0 0;padding:0;border:0}
+.pedido__casa legend,.pedido__campo span{display:block;padding:0;margin-bottom:.5rem;font-weight:600}
+.pedido__casas{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.escolha{position:relative;display:block}
+.escolha input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer}
+.escolha span{display:grid;place-items:center;min-height:48px;padding:.25rem .5rem;border:1.5px solid var(--linha-forte);border-radius:999px;font-weight:500;transition:background-color var(--transicao),color var(--transicao),border-color var(--transicao)}
+.escolha input:checked+span{background:var(--verde);border-color:var(--verde);color:var(--creme)}
+.escolha input:focus-visible+span{outline:3px solid var(--foco);outline-offset:3px}
+.pedido [hidden]{display:none}
+.pedido__erro{margin-bottom:.625rem;font-size:.9375rem;font-weight:500;color:#8C2F1B}
+.pedido__campo{display:block;margin-top:var(--esp-3)}
+.pedido__campo input,.pedido__campo textarea{display:block;width:100%;min-height:48px;padding:.625rem .75rem;border:1.5px solid var(--linha-forte);border-radius:6px;background:var(--papel);color:var(--preto);font:inherit}
+.pedido__campo textarea{min-height:72px;resize:vertical}
+.pedido__campo input::placeholder,.pedido__campo textarea::placeholder{color:var(--texto-suave-claro)}
+.pedido__base{padding:.75rem 1.25rem max(1rem,env(safe-area-inset-bottom));border-top:1px solid var(--linha-forte)}
+.pedido__nota{margin-bottom:.625rem;font-size:.875rem;color:var(--texto-suave-claro)}
+.pedido__enviar{width:100%}
+@media (min-width:960px){
+  .pedido{--fora:translateX(100%);inset:0 0 0 auto;width:440px;height:100dvh;max-height:none;border-radius:0;box-shadow:-10px 0 32px rgba(20,20,20,.28)}
+}
+
+/* ---------- Revelação ao rolar ---------- */
+.js .reveal{opacity:0;transform:translateY(14px);transition:opacity 520ms var(--ease),transform 520ms var(--ease);transition-delay:var(--d,0ms)}
+.js .reveal.visivel{opacity:1;transform:none}
+
+/* O certificado pousa sobre a foto: o único gesto próprio da página */
+.js .reveal .certificado{transform:translateY(28px) rotate(3deg);transition:transform 720ms var(--ease) 180ms}
+.js .reveal.visivel .certificado{transform:rotate(-1.75deg)}
+
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+@media (prefers-reduced-motion:reduce){
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .js .reveal .certificado{transform:rotate(-1.75deg);transition:none}
+  .abas.animada .abas__marca{transition:none}
+  .pedido[open],.pedido.fechando,.pedido::backdrop{animation:none}
+  .qtd__btn:active{transform:none}
+  #preview img,#preview img.ativa{transform:none;transition:opacity 180ms ease-out}
+  .btn,.card,.flutuante,.momento .foto,.carrossel__botao,.menu-btn span,.menu-btn span::before,.menu-btn span::after{transition-property:background-color,border-color,box-shadow,opacity}
+  .btn:hover,.btn:active,.card:hover,.momento:hover .foto,.flutuante:active,.carrossel__botao:hover,.carrossel__botao:active{transform:none!important}
+}
+@media (max-width:959px){html{scroll-padding-bottom:88px}}
+</style>
+</head>
+
+<body>
+<!--
+  COMO TROCAR UMA FOTO
+  As fotos atuais vêm de banco de imagens e são provisórias: não mostram a casa.
+  A lista com o que fotografar para cada arquivo está em img/CREDITOS.md.
+  Basta salvar a foto final com o mesmo nome em img/ (ou trocar o src) e atualizar o alt.
+  No cardápio, cada item usa duas imagens: data-src (foto grande no desktop) e img/mini/ (miniatura no celular).
+  Antes de publicar com fotos reais, apague a frase "Fotos ilustrativas" do rodapé.
+
+  COMO TROCAR OS LINKS
+  Procure por wa.me/5573998258544. A mensagem pronta fica depois de ?text=, codificada para URL.
+  Se cada casa tiver um número, troque nos botões de WhatsApp das unidades.
+-->
+
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="costela" viewBox="0 0 200 246">
+    <path fill-rule="evenodd" d="M100 36Q171.1 36 185.2 44.5Q152.8 50.5 120.4 54.5Q154.7 55.5 189 50.5Q199 63.1 193.9 79.3Q160.5 81.3 127.1 81.3Q160.5 89.4 193.9 91.5Q199 111.8 189.7 127.5Q158.9 118.8 128.1 108.1Q157.7 124.1 187.3 134.1Q188.5 144.2 177.1 154.2Q151.5 145.6 125.8 134.9Q149.5 150.9 173.1 160.8Q170.9 170.9 158.9 181Q140.1 172.3 121.4 161.7Q137.5 177.6 153.7 187.6Q149.4 196.7 138.3 205.7Q127.1 197.1 115.9 186.4Q124.1 202.4 132.3 212.3Q119.2 227.1 100.5 241.8Q80.8 227.1 67.7 212.3Q75.9 202.4 84.1 186.4Q72.9 197.1 61.7 205.7Q50.6 196.7 46.3 187.6Q62.5 177.6 78.6 161.7Q59.9 172.3 41.1 181Q29.1 170.9 26.9 160.8Q50.5 150.9 74.2 134.9Q48.5 145.6 22.9 154.2Q11.5 144.2 12.7 134.1Q42.3 124.1 71.9 108.1Q41.1 118.8 10.3 127.5Q1 111.8 6.1 91.5Q39.5 89.4 72.9 81.3Q39.5 81.3 6.1 79.3Q1 63.1 11 50.5Q45.3 55.5 79.6 54.5Q47.2 50.5 14.8 44.5Q28.9 36 100 36ZM108 78.3Q115 75.1 122 84.3Q115 87.5 108 78.3ZM108 105.1Q115 101.9 122 111.1Q115 114.3 108 105.1ZM108 131.9Q115 128.7 122 137.9Q115 141.1 108 131.9ZM108 158.7Q115 155.5 122 164.7Q115 167.9 108 158.7ZM92 88.6Q85 85.4 78 94.6Q85 97.8 92 88.6ZM92 117.5Q85 114.3 78 123.5Q85 126.7 92 117.5ZM92 144.2Q85 141 78 150.2Q85 153.4 92 144.2ZM98.4 37L95 4h4l2.6 33Z"/>
+  </symbol>
+  <symbol id="palmeira" viewBox="-6 -20 264 260">
+    <path d="M32.6 188.8Q57.6 182.7 85.1 167.7Q54.9 176 32.6 188.8ZM32.6 188.8Q31.2 163.2 21.7 133.4Q24.2 164.6 32.6 188.8ZM40.8 174.4Q69.6 167.6 102.1 151.8Q67.1 160.8 40.8 174.4ZM40.8 174.4Q40 144.8 31.2 109.8Q32.9 145.9 40.8 174.4ZM49.4 160.6Q81.7 153.5 118.6 137.3Q79.4 146.7 49.4 160.6ZM49.4 160.6Q49.7 127.5 42.2 87.9Q42.6 128.2 49.4 160.6ZM58.3 147.3Q93.6 140.4 134.4 124.2Q91.5 133.5 58.3 147.3ZM58.3 147.3Q60.2 111.4 54.6 67.9Q53 111.7 58.3 147.3ZM67.7 134.6Q105.5 128.1 149.5 112.5Q103.6 121.2 67.7 134.6ZM67.7 134.6Q71.5 96.5 68 49.9Q64.3 96.4 67.7 134.6ZM77.5 122.4Q117.1 116.8 163.7 102.1Q115.5 109.8 77.5 122.4ZM77.5 122.4Q83.3 82.8 82.5 34Q76.2 82.4 77.5 122.4ZM87.7 110.7Q128.6 106.3 176.9 92.9Q127.2 99.2 87.7 110.7ZM87.7 110.7Q95.8 70.4 97.7 20.3Q88.6 69.7 87.7 110.7ZM98.3 99.7Q139.8 96.5 189.1 84.7Q138.6 89.4 98.3 99.7ZM98.3 99.7Q108.6 59.4 113.3 8.9Q101.5 58.2 98.3 99.7ZM109.4 89.1Q150.7 87.4 200.1 77.4Q149.7 80.3 109.4 89.1ZM109.4 89.1Q121.8 49.7 129.2 -0.2Q114.8 48.1 109.4 89.1ZM120.8 79.1Q161.3 79 210.1 70.8Q160.6 71.8 120.8 79.1ZM120.8 79.1Q135.1 41.3 145 -7.2Q128.2 39.3 120.8 79.1ZM132.6 69.7Q171.6 71 218.9 64.7Q171.2 63.8 132.6 69.7ZM132.6 69.7Q148.6 34.1 160.5 -12.1Q141.8 31.7 132.6 69.7ZM144.9 60.8Q181.7 63.6 226.6 59Q181.6 56.4 144.9 60.8ZM144.9 60.8Q162 28.1 175.5 -15Q155.3 25.4 144.9 60.8ZM157.5 52.5Q191.6 56.5 233.3 53.4Q191.7 49.3 157.5 52.5ZM157.5 52.5Q175.3 23.1 189.8 -16.1Q168.8 20.1 157.5 52.5ZM170.6 44.7Q201.3 49.7 239.1 47.9Q201.6 42.6 170.6 44.7ZM170.6 44.7Q188.4 19.2 203.1 -15.7Q182.1 15.8 170.6 44.7ZM184.1 37.5Q210.8 43.3 244.1 42.4Q211.4 36.1 184.1 37.5ZM184.1 37.5Q201.3 16.2 215.5 -13.9Q195.1 12.5 184.1 37.5ZM198 30.8Q220.2 37 248.3 36.6Q221.1 29.8 198 30.8ZM198 30.8Q213.9 14 226.7 -11Q207.9 9.9 198 30.8ZM212.3 24.6Q229.6 30.9 252 30.6Q230.7 23.7 212.3 24.6ZM212.3 24.6Q226.2 12.5 236.8 -7.2Q220.5 8.1 212.3 24.6ZM11 233Q80 70 230 18Q83 73 14 234Z"/>
+  </symbol>
+</svg>
+
+<header class="site-header" id="cabecalho">
+  <div class="container site-header__barra">
+    <a class="logo" href="#topo" aria-label="Voltar ao início">PIZZA &amp; CAFFÈ</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-principal" aria-label="Abrir menu"><span></span></button>
+    <nav class="site-nav" id="nav-principal" aria-label="Principal">
+      <ul class="site-nav__lista">
+        <li><a href="#cardapio">Cardápio</a></li>
+        <li><a href="#rodizio">Rodízio</a></li>
+        <li><a href="#bambini">Bambini</a></li>
+        <li><a href="#drinks">Drinks</a></li>
+        <li><a href="#unidades">Unidades</a></li>
+      </ul>
+      <a class="btn btn--primario" data-pedir href="https://wa.me/5573998258544?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20fazer%20um%20pedido.%20Podem%20me%20ajudar%20com%20as%20op%C3%A7%C3%B5es%20dispon%C3%ADveis%20e%20o%20tempo%20de%20preparo%3F" target="_blank" rel="noopener">Pedir agora</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <section class="hero verde" id="topo" aria-labelledby="hero-titulo">
+    <div class="hero__texto">
+      <svg class="folha hero__folha" viewBox="0 0 200 246" aria-hidden="true" focusable="false"><use href="#costela"/></svg>
+      <h1 id="hero-titulo">Do primeiro café à última <em>fatia</em></h1>
+      <p class="hero__sub">Pizza, Caffè e Almoço em Ilhéus</p>
+      <div class="hero__acoes">
+        <a class="btn btn--primario" href="#cardapio">Ver cardápio</a>
+        <a class="btn btn--contorno" href="#unidades">Escolher unidade</a>
+      </div>
+    </div>
+    <div class="foto hero__foto">
+      <picture>
+        <source media="(min-width:960px)" srcset="img/hero.webp" width="1200" height="1400">
+        <img src="img/hero-m.webp" alt="Salão com paredes listradas de verde e creme, cadeiras de ratã, mesas de madeira e plantas" width="800" height="700" fetchpriority="high">
+      </picture>
+    </div>
+  </section>
+
+  <section class="secao creme" id="momentos" aria-labelledby="momentos-titulo">
+    <div class="container">
+      <div class="momentos__topo reveal">
+        <h2 id="momentos-titulo">Um dia, três <em>desculpas</em></h2>
+      </div>
+      <ul class="momentos__lista">
+        <li class="momento reveal">
+          <div class="foto foto--madeira">
+            <img src="img/cafe.webp" alt="Xícara de café branca sobre pires, em mesa de madeira" width="800" height="1000" loading="lazy" decoding="async">
+          </div>
+          <h3>Caffè</h3>
+          <p>Para quem só funciona depois da primeira xícara. A casa entende.</p>
+          <a class="link" href="#cardapio" data-aba="cafes">Ver cafés</a>
+        </li>
+        <li class="momento reveal" style="--d:90ms">
+          <div class="foto">
+            <img src="img/almoco.webp" alt="Prato de almoço com peixe e legumes em mesa de madeira" width="800" height="1000" loading="lazy" decoding="async">
+          </div>
+          <h3>Almoço</h3>
+          <p>Almoço executivo, e a gravata pode ficar no carro.</p>
+          <a class="link" href="#cardapio" data-aba="almoco">Ver almoço</a>
+        </li>
+        <li class="momento reveal" style="--d:180ms">
+          <div class="foto foto--noite">
+            <img src="img/pizza-drinks.webp" alt="Fatias de pizza em tábua ao lado de uma taça de vinho branco" width="800" height="1000" loading="lazy" decoding="async">
+          </div>
+          <h3>Pizza &amp; Drinks</h3>
+          <p>A noite começa com "só uma fatia". Ninguém acredita, e tudo bem.</p>
+          <a class="link" href="#cardapio" data-aba="salgadas">Ver pizzas</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="secao creme cardapio" id="cardapio" aria-labelledby="cardapio-titulo">
+    <svg class="folha cardapio__folha" viewBox="0 0 200 246" aria-hidden="true" focusable="false"><use href="#costela"/></svg>
+    <div class="container">
+      <div class="cardapio__topo reveal">
+        <h2 id="cardapio-titulo">Cardápio. <em>Leia com calma, peça sem culpa.</em></h2>
+      </div>
+      <p class="cardapio__aviso">Cardápio de exemplo: nomes, descrições e preços são ilustrativos e aguardam a lista oficial da casa. <span class="cardapio__dica">Toque no + para montar seu pedido e enviar pelo WhatsApp.</span></p>
+
+      <div class="abas" role="tablist" aria-label="Categorias do cardápio">
+        <button class="aba" role="tab" type="button" id="aba-salgadas" aria-controls="painel-salgadas" aria-selected="true">Pizzas salgadas</button>
+        <button class="aba" role="tab" type="button" id="aba-doces" aria-controls="painel-doces" aria-selected="false" tabindex="-1">Pizzas doces</button>
+        <button class="aba" role="tab" type="button" id="aba-almoco" aria-controls="painel-almoco" aria-selected="false" tabindex="-1">Almoço</button>
+        <button class="aba" role="tab" type="button" id="aba-saladas" aria-controls="painel-saladas" aria-selected="false" tabindex="-1">Saladas</button>
+        <button class="aba" role="tab" type="button" id="aba-sobremesas" aria-controls="painel-sobremesas" aria-selected="false" tabindex="-1">Sobremesas</button>
+        <button class="aba" role="tab" type="button" id="aba-cafes" aria-controls="painel-cafes" aria-selected="false" tabindex="-1">Cafés</button>
+        <button class="aba" role="tab" type="button" id="aba-drinks" aria-controls="painel-drinks" aria-selected="false" tabindex="-1">Drinks</button>
+      </div>
+
+      <div class="cardapio__corpo">
+        <div class="cardapio__paineis">
+
+          <div class="painel" role="tabpanel" id="painel-salgadas" aria-labelledby="aba-salgadas" tabindex="0">
+            <h3 class="sr">Pizzas salgadas</h3>
+            <ul>
+              <li class="item" data-foto="Pizza de calabresa com azeitonas, vista de cima" data-src="img/calabresa.webp">
+                <img class="item__mini" src="img/mini/calabresa.webp" alt="" width="88" height="88" loading="lazy" decoding="async">
+                <div class="item__texto">
+                  <div class="item__linha"><h4 class="item__nome">Calabresa</h4><span class="item__preco">R$ 52,90</span></div>
+                  <p class="item__desc">Calabresa, cebola e a certeza de que você escolheu bem.</p>
+                </div>
+              </li>
+              <li class="item" data-foto="Pizza com tomate, queijo e folhas de manjericão" data-src="img/margherita.webp">
+                <img class="item__mini" src="img/mini/margherita.webp" alt="" width="88" height="88" loading="lazy" decoding="async">
+                <div class="item__texto">
+                  <div class="item__linha"><h4 class="item__nome">Margherita</h4><span class="item__preco">R$ 49,90</span></div>
+                  <p class="item__desc">Tomate, muçarela e manjericão. Ninguém reclama.</p>
+                </div>
+              </li>
+              <li class="item" data-foto="Fatia de pizza de queijo sendo servida" data-src="img/queijos.webp">
+                <img class="item__mini" src="img/mini/queijos.webp" alt="" width="88" height="88" loading="lazy" decoding="async">
+                <div class="item__texto">
+                  <div class="item__linha"><h4 class="item__nome">Quatro queijos</h4><span class="item__preco">R$ 58,90</span></div>
+                  <p class="item__desc">Para quem acha que três seria pouco.</p>
+                </div>
+              </li>
+              <li class="item" data-foto="Pizza com azeitonas, tomate e queijo, vista de cima" data-src="img/portuguesa.webp">
+                <img class="item__mini" src="img/mini/portuguesa.webp" alt="" width="88" height="88" loading="lazy" decoding="async">
+                <div class="item__texto">
+                  <div class="item__linha"><h4 class="item__nome">Portuguesa</h4><span class="item__preco">R$ 56,90</span></div>
+                  <p class="item__desc">Tem um pouco de tudo, como toda boa família.</p>
+                </div>
+              </li>
+              <li class="item" data-foto="Pizza com cobertura cremosa sobre tábua de madeira" data-src="img/frango.webp">
+                <img class="item__mini" src="img/mini/frango.webp" alt="" width="88" height="88" loading="lazy" decoding="async">
+                <div class="item__texto">
+                  <div class="item__linha"><h4 class="item__nome">Frango com catupiry</h4><span class="item__preco">R$ 54,90</span></div>
+                  <p class="item__desc">A favorita de quem jura que não tem favorita.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="painel" role="tabpanel" id="painel-doces" aria-labelledby="aba-doces" tabindex="0">
+            <h3 class="sr">Pizzas doces</h3>
+            <ul>
+              <li class="item" data-foto="Massa coberta de morangos e banana em prato branco" data-src="img/choco-morango.webp">
+                <img class="item__mini" src="img/mini/choco-morango.webp" alt="" width="88" height="88" loading="lazy" decoding="async">
+                <div class="item__texto">
+                  <div class="item__linha"><h4 class="item__nome">Chocolate com morango</h4><span class="item__preco">R$ 54,90</span></div>
+                  <p class="item__desc">Dizem que é para dividir. Dizem.</p>
+                </div>
+              </li>
+              <li class="item" data-foto="Pizza com rodelas de banana sobre tábua de madeira" data-src="img/banana.webp">
+                <img class="item__mini" src="img/mini/banana.webp" alt="" width="88" height="88" loading="lazy" decoding="async">
+                <div class="item__texto">
+                  <div class="item__linha"><h4 class="item__nome">Banana com canela</h4><span class="item__preco">R$ 46,90</span></div>
+                  <p class="item__desc">Tem cheiro de casa de vó. Com licença poética.</p>
+                </div>
+              </li>
+              <li class="item" data-foto="Foto: pizza romeu e julieta, fatia servida no prato" data-src="">
+                <div class="item__texto">
+                  <div class="item__linha"><h4 class="item__nome">Romeu e Julieta</h4><span class="item__preco">R$ 48,90</span></div>
+                  <p class="item__desc">Queijo e goiabada. Aqui a história termina bem.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="painel" role="tabpanel" id="painel-almoco" aria-labelledby="aba-almoco" tabindex="0">
+            <h3 class="sr">Almoço</h3>
+            <ul>
+              <li class="item" data-foto="Prato com frango assado, arroz temperado e salada" data-src="img/ex-frango.webp">
+                <img class="item__mini" src="img/mini/ex-frango.webp" alt="" width="88" height="88" loading="lazy" decoding="async">
+                <div class="item__texto">
+                  <div class="item__linha"><h4 class="item__nome">Executivo de frango</h4><span class="item__preco">R$ 32,90</span></div>
+                  <p class="item__desc">Resolve o almoço e a segunda metade do dia.</p>
+                </div>
+              </li>
+              <li class="item" data-foto="Prato com carne grelhada sobre mesa de madeira" data-src="img/ex-carne.webp">
+                <img class="item__mini" src="img/mini/ex-carne.webp" alt="" width="88" height="88" loading="lazy" decoding="async">
+                <div class="item__texto">
+                  <div class="item__linha"><h4 class="item__nome">Executivo de carne</h4><span class="item__preco">R$ 36,90</span></div>
+                  <p class="item__desc">Para a reunião que poderia ter sido um almoço.</p>
+                </div>
+              </li>
+              <li class="item" data-foto="Filé grelhado com legumes e limão" data-src="img/ex-peixe.webp">
+                <img class="item__mini" src="img/mini/ex-peixe.webp" alt="" width="88" height="88" loading="lazy" decoding="async">
+                <div class="item__texto">
+                  <div class="item__linha"><h4 class="item__nome">Executivo de peixe</h4><span class="item__preco">R$ 38,90</span></div>
+                  <p class="item__desc">Estamos em Ilhéus. Faz sentido.</p>
+                </div>
+              </li>
+              <li class="item" data-foto="Prato colorido com folhas, tomate, grão-de-bico e abacate" data-src="img/ex-veg.webp">
+                <img class="item__mini" src="img/mini/ex-veg.webp" alt="" width="88" height="88" loading="lazy" decoding="async">
+                <div class="item__texto">
+                  <div class="item__linha"><h4 class="item__nome">Opção vegetariana</h4><span class="item__preco">R$ 29,90</span></div>
+                  <p class="item__desc">Ninguém na mesa vai sentir falta de nada.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="painel" role="tabpanel" id="painel-saladas" aria-labelledby="aba-saladas" tabindex="0">
+            <h3 class="sr">Saladas</h3>
+            <ul>
+              <li class="item" data-foto="Tigela de salada sobre tábua de madeira" data-src="img/salada-casa.webp">
+                <img class="item__mini" src="img/mini/salada-casa.webp" alt="" width="88" height="88" loading="lazy" decoding="async">
+                <div class="item__texto">
+                  <div class="item__linha"><h4 class="item__nome">Salada da casa</h4><span class="item__preco">R$ 26,90</span></div>
+                  <p class="item__desc">Leve o bastante para justificar o pudim.</p>
+                </div>
+              </li>
+              <li class="item" data-foto="Salada caprese com tomate, muçarela e manjericão" data-src="img/caprese.webp">
+                <img class="item__mini" src="img/mini/caprese.webp" alt="" width="88" height="88" loading="lazy" decoding="async">
+                <div class="item__texto">
+                  <div class="item__linha"><h4 class="item__nome">Caprese</h4><span class="item__preco">R$ 29,90</span></div>
+                  <p class="item__desc">Tomate, muçarela e manjericão, sem massa por perto.</p>
+                </div>
+              </li>
+              <li class="item" data-foto="Tigela de salada com legumes, vista de cima" data-src="img/salada-frango.webp">
+                <img class="item__mini" src="img/mini/salada-frango.webp" alt="" width="88" height="88" loading="lazy" decoding="async">
+                <div class="item__texto">
+                  <div class="item__linha"><h4 class="item__nome">Salada com frango grelhado</h4><span class="item__preco">R$ 34,90</span></div>
+                  <p class="item__desc">Para quem veio decidido. Por enquanto.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="painel" role="tabpanel" id="painel-sobremesas" aria-labelledby="aba-sobremesas" tabindex="0">
+            <h3 class="sr">Sobremesas</h3>
+            <ul>
+              <li class="item" data-foto="Pudim com calda de caramelo em prato branco" data-src="img/pudim.webp">
+                <img class="item__mini" src="img/mini/pudim.webp" alt="" width="88" height="88" loading="lazy" decoding="async">
+                <div class="item__texto">
+                  <div class="item__linha"><h4 class="item__nome">Pudim</h4><span class="item__preco">R$ 14,90</span></div>
+                  <p class="item__desc">Peça uma colher para cada um. Evita conversas difíceis.</p>
+                </div>
+              </li>
+              <li class="item" data-foto="Fatia de torta em prato branco sobre mesa de madeira" data-src="img/torta.webp">
+                <img class="item__mini" src="img/mini/torta.webp" alt="" width="88" height="88" loading="lazy" decoding="async">
+                <div class="item__texto">
+                  <div class="item__linha"><h4 class="item__nome">Tortas</h4><span class="item__preco">R$ 16,90</span></div>
+                  <p class="item__desc">Pergunte quais estão na vitrine hoje. Depois pergunte de novo.</p>
+                </div>
+              </li>
+              <li class="item" data-foto="Fatia de cheesecake em prato verde" data-src="img/cheesecake.webp">
+                <img class="item__mini" src="img/mini/cheesecake.webp" alt="" width="88" height="88" loading="lazy" decoding="async">
+                <div class="item__texto">
+                  <div class="item__linha"><h4 class="item__nome">Cheesecake</h4><span class="item__preco">R$ 18,90</span></div>
+                  <p class="item__desc">Difícil deixar um pedaço no prato.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="painel" role="tabpanel" id="painel-cafes" aria-labelledby="aba-cafes" tabindex="0">
+            <h3 class="sr">Cafés</h3>
+            <ul>
+              <li class="item" data-foto="Espresso em xícara pequena sobre pires" data-src="img/espresso.webp">
+                <img class="item__mini" src="img/mini/espresso.webp" alt="" width="88" height="88" loading="lazy" decoding="async">
+                <div class="item__texto">
+                  <div class="item__linha"><h4 class="item__nome">Espresso</h4><span class="item__preco">R$ 7,50</span></div>
+                  <p class="item__desc">Pequeno e direto ao ponto.</p>
+                </div>
+              </li>
+              <li class="item" data-foto="Cappuccino com desenho na espuma, visto de cima" data-src="img/cappuccino.webp">
+                <img class="item__mini" src="img/mini/cappuccino.webp" alt="" width="88" height="88" loading="lazy" decoding="async">
+                <div class="item__texto">
+                  <div class="item__linha"><h4 class="item__nome">Cappuccino</h4><span class="item__preco">R$ 12,90</span></div>
+                  <p class="item__desc">Para conversas que não têm hora para acabar.</p>
+                </div>
+              </li>
+              <li class="item" data-foto="Caneca de vidro com café e chocolate sobre mesa de madeira" data-src="img/mocha.webp">
+                <img class="item__mini" src="img/mini/mocha.webp" alt="" width="88" height="88" loading="lazy" decoding="async">
+                <div class="item__texto">
+                  <div class="item__linha"><h4 class="item__nome">Mocha</h4><span class="item__preco">R$ 14,90</span></div>
+                  <p class="item__desc">Café e chocolate fizeram as pazes.</p>
+                </div>
+              </li>
+              <li class="item" data-foto="Xícara de chocolate quente com marshmallows" data-src="img/chocolate-quente.webp">
+                <img class="item__mini" src="img/mini/chocolate-quente.webp" alt="" width="88" height="88" loading="lazy" decoding="async">
+                <div class="item__texto">
+                  <div class="item__linha"><h4 class="item__nome">Chocolate quente</h4><span class="item__preco">R$ 13,90</span></div>
+                  <p class="item__desc">Vale até nos dias de calor em Ilhéus, que são quase todos.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="painel" role="tabpanel" id="painel-drinks" aria-labelledby="aba-drinks" tabindex="0">
+            <h3 class="sr">Drinks e vinhos</h3>
+            <ul>
+              <li class="item" data-foto="Drink com casca de laranja no balcão de um bar" data-src="img/drink-jorge.webp">
+                <img class="item__mini" src="img/mini/drink-jorge.webp" alt="" width="88" height="88" loading="lazy" decoding="async">
+                <div class="item__texto">
+                  <div class="item__linha"><h4 class="item__nome">Drink Jorge Amado</h4><span class="item__preco">R$ 28,90</span></div>
+                  <p class="item__desc">Da linha Histórias que nós servimos. Vem com enredo.</p>
+                </div>
+              </li>
+              <li class="item" data-foto="Coquetel em taça sobre balcão iluminado" data-src="img/drink-autoral.webp">
+                <img class="item__mini" src="img/mini/drink-autoral.webp" alt="" width="88" height="88" loading="lazy" decoding="async">
+                <div class="item__texto">
+                  <div class="item__linha"><h4 class="item__nome">Drinks autorais</h4><span class="item__preco">R$ 26,90</span></div>
+                  <p class="item__desc">Cada um com uma história baiana. Veja a carta abaixo.</p>
+                </div>
+              </li>
+              <li class="item" data-foto="Taça de vinho ao lado de uma pizza doce" data-src="img/vinho.webp">
+                <img class="item__mini" src="img/mini/vinho.webp" alt="" width="88" height="88" loading="lazy" decoding="async">
+                <div class="item__texto">
+                  <div class="item__linha"><h4 class="item__nome">Vinhos</h4><span class="item__preco">R$ 89,90</span></div>
+                  <p class="item__desc">Pizza e vinho: o casal que nunca discute.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <aside class="cardapio__preview" aria-label="Foto do item">
+          <div class="foto foto--madeira" id="preview" style="--ar:4/5">
+            <img class="ativa" src="img/calabresa.webp" alt="Pizza de calabresa com azeitonas, vista de cima" width="640" height="800" loading="lazy" decoding="async">
+            <span class="foto__legenda" aria-hidden="true"></span>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <div class="madeira"></div>
+  <div class="foto rodizio__foto">
+    <img src="img/rodizio.webp" alt="Pizzas com rúcula e tomate servidas lado a lado" width="1800" height="720" loading="lazy" decoding="async">
+  </div>
+  <section class="secao verde rodizio" id="rodizio" aria-labelledby="rodizio-titulo">
+    <svg class="folha rodizio__folha" viewBox="-6 -20 264 260" aria-hidden="true" focusable="false"><use href="#palmeira"/></svg>
+    <div class="container rodizio__grade">
+      <div class="reveal">
+        <h2 id="rodizio-titulo">Vocês têm rodízio? <em>Agora sim!</em></h2>
+        <p class="mao">Ninguém aqui conta as fatias. Nem você.</p>
+      </div>
+      <div class="reveal" style="--d:90ms">
+        <!-- EDITAR: preço do rodízio. Este é o único lugar do site onde o valor aparece. -->
+        <p class="preco"><span class="preco__moeda">R$</span><span id="preco-rodizio">64</span></p>
+        <p class="preco__nota">Preço promocional, por pessoa acima de 10 anos</p>
+        <ul class="condicoes">
+          <li><span class="ph">[DIAS E HORÁRIOS DO RODÍZIO]</span></li>
+          <li><span class="ph">[UNIDADES PARTICIPANTES]</span></li>
+          <li><span class="ph">[CONDIÇÃO PARA CRIANÇAS DE ATÉ 10 ANOS]</span></li>
+          <li><span class="ph">[VALIDADE DA PROMOÇÃO]</span></li>
+        </ul>
+        <a class="btn btn--primario" href="#unidades">Escolher unidade</a>
+      </div>
+    </div>
+  </section>
+  <div class="madeira"></div>
+
+  <section class="secao creme bambini" id="bambini" aria-labelledby="bambini-titulo">
+    <svg class="folha bambini__folha" viewBox="0 0 200 246" aria-hidden="true" focusable="false"><use href="#costela"/></svg>
+    <div class="container bambini__grade">
+      <div class="bambini__fotos reveal">
+        <div class="foto foto--madeira" style="--ar:4/3">
+          <img src="img/playground.webp" alt="Playground de madeira cercado de árvores em dia de sol" width="1000" height="750" loading="lazy" decoding="async">
+        </div>
+        <div class="certificado">
+          <div class="certificado__corpo">
+            <p class="certificado__selo">Certificado Bambini</p>
+            <p class="certificado__titulo">Fez a própria pizza, sujou a bancada e <em>aprovou o resultado.</em></p>
+            <p class="certificado__nota">Modelo ilustrativo</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal" style="--d:90ms">
+        <h2 id="bambini-titulo">Brincar com a comida? <em>Aqui pode.</em></h2>
+        <p class="lead">No Bambini, o espaço família da casa, os adultos conversam até o fim e as crianças têm mais o que fazer.</p>
+        <div class="frentes">
+          <div>
+            <h3>Área kids</h3>
+            <p>Playground para gastar energia enquanto a pizza não chega.</p>
+          </div>
+          <div>
+            <h3>Oficina de pizza</h3>
+            <p>As crianças põem a mão na massa e saem com certificado.</p>
+            <p class="ph">[DIAS, HORÁRIOS E IDADES DA OFICINA]</p>
+          </div>
+        </div>
+        <div class="foto bambini__oficina" style="--ar:3/2">
+          <img src="img/oficina.webp" alt="Mãos de criança amassando massa em uma bancada" width="900" height="600" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao noite historias" id="drinks" aria-labelledby="drinks-titulo">
+    <div class="historias__palco">
+    <div class="container historias__topo reveal">
+      <div>
+        <h2 id="drinks-titulo">Histórias que nós <em>servimos</em></h2>
+        <p class="lead">Drinks autorais com personagens e autores baianos, servidos gelados.</p>
+      </div>
+      <div class="carrossel__botoes">
+        <button class="carrossel__botao" type="button" id="drinks-ant" aria-label="Drink anterior" aria-controls="drinks-trilho">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <button class="carrossel__botao" type="button" id="drinks-prox" aria-label="Próximo drink" aria-controls="drinks-trilho">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+    <ul class="trilho reveal" id="drinks-trilho" tabindex="0" aria-label="Carrossel de drinks autorais">
+      <li class="drink">
+        <div class="foto foto--noite" style="--ar:3/4">
+          <img src="img/drink-jorge.webp" alt="Drink com casca de laranja no balcão de um bar, com luz baixa" width="640" height="853" loading="lazy" decoding="async">
+        </div>
+        <h3>Jorge Amado</h3>
+        <p>Para quem fez o mundo inteiro querer conhecer Ilhéus.</p>
+      </li>
+      <li class="drink">
+        <div class="foto foto--noite" style="--ar:3/4">
+          <img src="img/drink-gabriela.webp" alt="Drink em copo baixo sobre mesa de madeira, iluminado de lado" width="640" height="853" loading="lazy" decoding="async">
+        </div>
+        <h3>Gabriela</h3>
+        <p>Cravo, canela e Ilhéus. Quem leu já entendeu.</p>
+        <span class="drink__marca">Nome de exemplo</span>
+      </li>
+      <li class="drink">
+        <div class="foto foto--noite" style="--ar:3/4">
+          <img src="img/drink-nacib.webp" alt="Drink com fatia de laranja e canela, com luz baixa" width="640" height="853" loading="lazy" decoding="async">
+        </div>
+        <h3>Nacib</h3>
+        <p>O dono de bar mais apaixonado da literatura.</p>
+        <span class="drink__marca">Nome de exemplo</span>
+      </li>
+      <li class="drink">
+        <div class="foto foto--noite" style="--ar:3/4">
+          <img src="img/drink-flor.webp" alt="Taça de coquetel sobre mesa de madeira" width="640" height="853" loading="lazy" decoding="async">
+        </div>
+        <h3>Dona Flor</h3>
+        <p>Para quem nunca conseguiu escolher um só.</p>
+        <span class="drink__marca">Nome de exemplo</span>
+      </li>
+      <li class="drink">
+        <div class="foto foto--noite" style="--ar:3/4">
+          <img src="img/drink-ubaldo.webp" alt="Drink vermelho em copo alto, com folhagem ao fundo" width="640" height="853" loading="lazy" decoding="async">
+        </div>
+        <h3>João Ubaldo</h3>
+        <p>O brinde já vem pronto: viva o povo brasileiro.</p>
+        <span class="drink__marca">Nome de exemplo</span>
+      </li>
+    </ul>
+    <div class="historias__progresso" aria-hidden="true"><span></span></div>
+    </div>
+  </section>
+
+  <section class="secao creme prova" id="prova" aria-labelledby="prova-titulo">
+    <div class="container">
+      <div class="reveal">
+        <h2 id="prova-titulo">Mais de <em>15 mil</em> pessoas acompanham a casa</h2>
+        <p class="lead">Tem gente que segue pela pizza, tem gente que segue pelo pudim. A gente não julga.</p>
+        <a class="link prova__link" href="https://www.instagram.com/gringa.casa/" target="_blank" rel="noopener">Seguir no Instagram</a>
+      </div>
+      <div class="depoimentos">
+        <figure class="depoimento reveal">
+          <span class="depoimento__tag">Exemplo</span>
+          <blockquote><span class="ph">[AVALIAÇÃO REAL DO GOOGLE 1]</span></blockquote>
+          <figcaption><span class="ph">[NOME]</span>, avaliação do Google</figcaption>
+        </figure>
+        <figure class="depoimento reveal" style="--d:90ms">
+          <span class="depoimento__tag">Exemplo</span>
+          <blockquote><span class="ph">[AVALIAÇÃO REAL DO GOOGLE 2]</span></blockquote>
+          <figcaption><span class="ph">[NOME]</span>, avaliação do Google</figcaption>
+        </figure>
+        <figure class="depoimento reveal" style="--d:180ms">
+          <span class="depoimento__tag">Exemplo</span>
+          <blockquote><span class="ph">[AVALIAÇÃO REAL DO GOOGLE 3]</span></blockquote>
+          <figcaption><span class="ph">[NOME]</span>, avaliação do Google</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao verde unidades" id="unidades" aria-labelledby="unidades-titulo">
+    <div class="container">
+      <div class="unidades__topo reveal">
+        <h2 id="unidades-titulo">Duas casas. <em>Escolha a mais perto da sua fome.</em></h2>
+        <p class="lead">Casa Centro e Casa Sul. Morando aqui ou de passagem, tem mesa.</p>
+      </div>
+      <div class="unidades__lista">
+        <article class="unidade card reveal">
+          <div class="foto foto--madeira" style="--ar:16/10">
+            <img src="img/casa-centro.webp" alt="Entrada de madeira cercada de plantas, com bancos altos" width="800" height="500" loading="lazy" decoding="async">
+          </div>
+          <div class="unidade__corpo">
+            <h3>Casa Centro</h3>
+            <dl class="unidade__dados">
+              <div><dt>Endereço</dt><dd class="ph">[ENDEREÇO CASA CENTRO]</dd></div>
+              <div><dt>Horário</dt><dd class="ph">[HORÁRIO CASA CENTRO]</dd></div>
+            </dl>
+            <div class="unidade__acoes">
+              <a class="btn btn--primario" href="https://www.google.com/maps/search/?api=1&amp;query=GRINGA%20Casa%20Centro%20Ilh%C3%A9us%20BA" target="_blank" rel="noopener">Como chegar</a>
+              <a class="btn btn--contorno" href="https://wa.me/5573998258544?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20falar%20com%20a%20Casa%20Centro.%20Podem%20me%20informar%20o%20hor%C3%A1rio%20de%20hoje%20e%20se%20h%C3%A1%20mesa%20dispon%C3%ADvel%3F" target="_blank" rel="noopener" aria-label="WhatsApp da Casa Centro">WhatsApp</a>
+            </div>
+          </div>
+        </article>
+        <article class="unidade card reveal" style="--d:90ms">
+          <div class="foto" style="--ar:16/10">
+            <img src="img/casa-sul.webp" alt="Balcão de madeira com plantas e luminárias pendentes" width="800" height="500" loading="lazy" decoding="async">
+          </div>
+          <div class="unidade__corpo">
+            <h3>Casa Sul</h3>
+            <dl class="unidade__dados">
+              <div><dt>Endereço</dt><dd class="ph">[ENDEREÇO CASA SUL]</dd></div>
+              <div><dt>Horário</dt><dd class="ph">[HORÁRIO CASA SUL]</dd></div>
+            </dl>
+            <div class="unidade__acoes">
+              <a class="btn btn--primario" href="https://www.google.com/maps/search/?api=1&amp;query=GRINGA%20Casa%20Sul%20Ilh%C3%A9us%20BA" target="_blank" rel="noopener">Como chegar</a>
+              <a class="btn btn--contorno" href="https://wa.me/5573998258544?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20falar%20com%20a%20Casa%20Sul.%20Podem%20me%20informar%20o%20hor%C3%A1rio%20de%20hoje%20e%20se%20h%C3%A1%20mesa%20dispon%C3%ADvel%3F" target="_blank" rel="noopener" aria-label="WhatsApp da Casa Sul">WhatsApp</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="verde rodape">
+  <div class="rodape__faixa" aria-hidden="true"></div>
+  <div class="container">
+    <div class="rodape__grade">
+      <div>
+        <a class="logo" href="#topo" aria-label="Voltar ao início">PIZZA &amp; CAFFÈ</a>
+        <p class="mao">Volte com fome.</p>
+        <p>Pizza, Caffè e Almoço em Ilhéus, Bahia.</p>
+      </div>
+      <div>
+        <h2>Fale com a casa</h2>
+        <ul>
+          <li><a class="link" href="https://www.instagram.com/gringa.casa/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a class="link" data-pedir href="https://wa.me/5573998258544?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20fazer%20um%20pedido.%20Podem%20me%20ajudar%20com%20as%20op%C3%A7%C3%B5es%20dispon%C3%ADveis%20e%20o%20tempo%20de%20preparo%3F" target="_blank" rel="noopener">Fazer pedido</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Horários</h2>
+        <ul>
+          <li>Casa Centro: <span class="ph">[HORÁRIO RESUMIDO CASA CENTRO]</span></li>
+          <li>Casa Sul: <span class="ph">[HORÁRIO RESUMIDO CASA SUL]</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="rodape__legal">Ilhéus, Bahia. Fotos ilustrativas de banco de imagens.</p>
+  </div>
+</footer>
+
+<dialog class="pedido" id="pedido" aria-labelledby="pedido-titulo">
+  <div class="pedido__topo">
+    <h2 id="pedido-titulo">Seu pedido</h2>
+    <button class="pedido__fechar" id="pedido-fechar" type="button" aria-label="Fechar pedido" autofocus>
+      <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4 4l12 12M16 4L4 16"/></svg>
+    </button>
+  </div>
+  <div class="pedido__corpo">
+    <p class="pedido__vazio" id="pedido-vazio" hidden>Nada por aqui ainda. O cardápio está esperando.</p>
+    <ul id="pedido-lista"></ul>
+    <div id="pedido-campos">
+      <fieldset class="pedido__casa">
+        <legend>Como você quer receber?</legend>
+        <div class="pedido__casas">
+          <label class="escolha"><input type="radio" name="tipo" value="retirada"><span>Retirada</span></label>
+          <label class="escolha"><input type="radio" name="tipo" value="entrega"><span>Entrega</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="pedido__casa">
+        <legend>Em qual casa?</legend>
+        <div class="pedido__casas">
+          <label class="escolha"><input type="radio" name="casa" value="Casa Centro"><span>Casa Centro</span></label>
+          <label class="escolha"><input type="radio" name="casa" value="Casa Sul"><span>Casa Sul</span></label>
+        </div>
+      </fieldset>
+      <label class="pedido__campo">
+        <span>Seu nome</span>
+        <input id="pedido-nome" type="text" maxlength="80" autocomplete="name">
+      </label>
+      <div id="pedido-entrega" hidden>
+        <label class="pedido__campo">
+          <span>Endereço de entrega</span>
+          <input id="pedido-endereco" type="text" maxlength="160" autocomplete="street-address" placeholder="Rua, número e bairro">
+        </label>
+        <label class="pedido__campo">
+          <span>Ponto de referência (opcional)</span>
+          <input id="pedido-referencia" type="text" maxlength="120">
+        </label>
+      </div>
+      <label class="pedido__campo">
+        <span>Alguma observação?</span>
+        <textarea id="pedido-obs" rows="2" maxlength="300" placeholder="Ex.: sem cebola"></textarea>
+      </label>
+    </div>
+  </div>
+  <div class="pedido__base" id="pedido-base">
+    <p class="pedido__total" id="pedido-resumo"><span>Total</span><strong id="pedido-total"></strong></p>
+    <p class="pedido__nota" id="pedido-nota">O valor final é confirmado pela casa no WhatsApp.</p>
+    <p class="pedido__erro" id="pedido-erro" role="alert" hidden></p>
+    <a class="btn btn--primario pedido__enviar" id="pedido-enviar" href="https://wa.me/5573998258544" target="_blank" rel="noopener">Enviar pelo WhatsApp</a>
+  </div>
+</dialog>
+<p class="sr" id="pedido-status" role="status"></p>
+
+<a class="flutuante" data-pedir href="https://wa.me/5573998258544?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20fazer%20um%20pedido.%20Podem%20me%20ajudar%20com%20as%20op%C3%A7%C3%B5es%20dispon%C3%ADveis%20e%20o%20tempo%20de%20preparo%3F" target="_blank" rel="noopener" aria-label="Pedir agora">
+  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12a8 8 0 1 1 3.4 6.5L4 19.6l1.1-3.3A7.9 7.9 0 0 1 4 12z"/></svg>
+  <span>Pedir</span>
+</a>
+
+<script>
+(function () {
+  var $ = function (s, c) { return (c || document).querySelector(s); };
+  var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+  var reduzido = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Fontes só depois da primeira pintura: o texto aparece logo, nas fontes de reserva */
+  var fontes = null;
+  var hashInicial = location.hash;
+
+  /* Seções fora da tela só fazem layout depois das fontes; aí as alturas são reais */
+  function liberarLayout() {
+    if (document.documentElement.classList.contains('pronto')) return;
+    document.documentElement.classList.add('pronto');
+    medirPalco();
+    if (hashInicial) $(hashInicial).scrollIntoView({ behavior: 'auto' });
+  }
+
+  function carregarFontes() {
+    if (fontes) return;
+    fontes = document.createElement('link');
+    fontes.onload = function () { document.fonts.ready.then(liberarLayout); };
+    fontes.onerror = liberarLayout;
+    fontes.rel = 'stylesheet';
+    fontes.href = 'https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500;600&display=swap';
+    document.head.appendChild(fontes);
+  }
+  requestAnimationFrame(function () { setTimeout(carregarFontes); });
+  setTimeout(carregarFontes, 1000); /* aba em segundo plano não desenha quadros */
+  setTimeout(liberarLayout, 5000);
+
+  /* Header: fundo sólido ao rolar */
+  var cabecalho = $('#cabecalho');
+  function aoRolar() { cabecalho.classList.toggle('solido', window.scrollY > 40); }
+  addEventListener('scroll', aoRolar, { passive: true });
+  aoRolar();
+
+  /* Menu mobile */
+  var menuBtn = $('.menu-btn');
+  var foraDoMenu = [$('main'), $('footer'), $('.flutuante')];
+  function menu(abrir) {
+    document.body.classList.toggle('menu-aberto', abrir);
+    foraDoMenu.forEach(function (el) { el.inert = abrir; });
+    menuBtn.setAttribute('aria-expanded', abrir);
+    menuBtn.setAttribute('aria-label', abrir ? 'Fechar menu' : 'Abrir menu');
+  }
+  menuBtn.addEventListener('click', function () {
+    menu(menuBtn.getAttribute('aria-expanded') !== 'true');
+  });
+  $$('.site-nav a').forEach(function (a) {
+    a.addEventListener('click', function () { menu(false); });
+  });
+  addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && menuBtn.getAttribute('aria-expanded') === 'true') {
+      menu(false);
+      menuBtn.focus();
+    }
+  });
+
+  matchMedia('(min-width: 960px)').addEventListener('change', function () { menu(false); });
+
+  /* Link da seção atual no menu */
+  var linksNav = $$('.site-nav__lista a');
+  var espiao = new IntersectionObserver(function (entradas) {
+    entradas.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      linksNav.forEach(function (a) {
+        if (a.getAttribute('href') === '#' + e.target.id) a.setAttribute('aria-current', 'true');
+        else a.removeAttribute('aria-current');
+      });
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  $$('main section[id]').forEach(function (s) { espiao.observe(s); });
+
+  /* Abas do cardápio */
+  var abas = $$('.aba');
+  var paineis = $$('.painel');
+  var preview = $('#preview');
+  var previewLegenda = $('.foto__legenda', preview);
+  var camadas = [$('img', preview)];
+  var ativa = 0;
+  var pedido = 0;
+  camadas[1] = camadas[0].cloneNode();
+  camadas[1].classList.remove('ativa');
+  camadas[1].alt = '';
+  preview.insertBefore(camadas[1], previewLegenda);
+
+  /* Troca a foto em cruzamento, só depois de decodificada, para não piscar */
+  function mostrarFoto(item) {
+    if (!matchMedia('(min-width: 960px)').matches) return;
+    var vez = ++pedido;
+    var src = item.dataset.src;
+    var proxima = camadas[1 - ativa];
+    preview.classList.toggle('vazia', !src);
+    if (!src) {
+      camadas.forEach(function (c) { c.classList.remove('ativa'); });
+      previewLegenda.textContent = item.dataset.foto;
+      return;
+    }
+    proxima.src = src;
+    proxima.alt = item.dataset.foto;
+    proxima.decode().catch(function () {}).then(function () {
+      if (vez !== pedido) return;
+      previewLegenda.textContent = '';
+      proxima.classList.add('ativa');
+      camadas[ativa].classList.remove('ativa');
+      camadas[ativa].alt = '';
+      ativa = 1 - ativa;
+    });
+  }
+
+  /* Marca sob a aba: um traço de 1px esticado, para animar só transform */
+  var listaAbas = $('.abas');
+  var marca = document.createElement('span');
+  marca.className = 'abas__marca';
+  marca.setAttribute('aria-hidden', 'true');
+  listaAbas.appendChild(marca);
+  var abaAtual = null;
+
+  function moverMarca() {
+    var y = abaAtual.offsetTop + abaAtual.offsetHeight - 3;
+    marca.style.transform = 'translate(' + abaAtual.offsetLeft + 'px,' + y + 'px) scaleX(' + abaAtual.offsetWidth + ')';
+  }
+
+  /* Troca de painel: sai o antigo, a altura acompanha, os itens entram em sequência */
+  var caixaPaineis = $('.cardapio__paineis');
+  var EASE = 'cubic-bezier(.23,1,.32,1)';
+  var painelAtual = null;
+  var painelAlvo = null;
+  var sentidoAlvo = 1;
+  var saida = null;
+  var animAltura = null;
+  var entradas = [];
+
+  function entrarPainel(altura) {
+    var antigo = painelAtual;
+    entradas.forEach(function (a) { a.cancel(); });
+    saida.cancel();
+    saida = null;
+    antigo.hidden = true;
+    painelAlvo.hidden = false;
+    painelAtual = painelAlvo;
+
+    caixaPaineis.style.height = '';
+    animAltura = caixaPaineis.animate(
+      [{ height: altura + 'px' }, { height: caixaPaineis.offsetHeight + 'px' }],
+      { duration: 360, easing: EASE }
+    );
+    caixaPaineis.style.overflowY = 'clip';
+    animAltura.onfinish = function () { caixaPaineis.style.overflowY = ''; };
+
+    entradas = $$('.item', painelAtual).map(function (item, i) {
+      return item.animate(
+        [{ opacity: 0, transform: 'translateX(' + 14 * sentidoAlvo + 'px)' }, { opacity: 1, transform: 'none' }],
+        { duration: 420, delay: i * 40, easing: EASE, fill: 'backwards' }
+      );
+    });
+  }
+
+  function trocarPainel(novo, sentido) {
+    painelAlvo = novo;
+    sentidoAlvo = sentido;
+    if (saida) return; /* a saída em curso já entrega ao painel mais recente */
+    var altura = caixaPaineis.offsetHeight;
+    if (animAltura) animAltura.cancel();
+    caixaPaineis.style.height = altura + 'px';
+    saida = painelAtual.animate(
+      [{ opacity: 1, transform: 'none' }, { opacity: 0, transform: 'translateX(' + -10 * sentido + 'px)' }],
+      { duration: 130, easing: 'ease-in', fill: 'forwards' }
+    );
+    setTimeout(function () { entrarPainel(altura); }, 130); /* aba em segundo plano não desenha quadros */
+  }
+
+  function ativarAba(aba, focar) {
+    if (focar) aba.focus();
+    if (aba === abaAtual) return;
+    var painel = $('#' + aba.getAttribute('aria-controls'));
+    var sentido = abas.indexOf(aba) > abas.indexOf(abaAtual) ? 1 : -1;
+    var primeira = !abaAtual;
+    abas.forEach(function (a) {
+      var ativa = a === aba;
+      a.setAttribute('aria-selected', ativa);
+      a.tabIndex = ativa ? 0 : -1;
+    });
+    abaAtual = aba;
+    moverMarca();
+    if (primeira || reduzido || !caixaPaineis.animate) {
+      paineis.forEach(function (p) { p.hidden = p !== painel; });
+      painelAtual = painel;
+    } else {
+      listaAbas.classList.add('animada');
+      trocarPainel(painel, sentido);
+    }
+    mostrarFoto($('.item', painel));
+  }
+
+  abas.forEach(function (aba, i) {
+    aba.addEventListener('click', function () { ativarAba(aba); });
+    aba.addEventListener('keydown', function (e) {
+      var alvo = null;
+      if (e.key === 'ArrowRight') alvo = abas[(i + 1) % abas.length];
+      if (e.key === 'ArrowLeft') alvo = abas[(i - 1 + abas.length) % abas.length];
+      if (e.key === 'Home') alvo = abas[0];
+      if (e.key === 'End') alvo = abas[abas.length - 1];
+      if (alvo) { e.preventDefault(); ativarAba(alvo, true); }
+    });
+  });
+  ativarAba(abas[0]);
+
+  /* Fontes e largura mudam as medidas das abas */
+  if (window.ResizeObserver) {
+    var medirAbas = new ResizeObserver(moverMarca);
+    abas.forEach(function (aba) { medirAbas.observe(aba); });
+  } else {
+    addEventListener('resize', moverMarca);
+  }
+
+  $$('[data-aba]').forEach(function (link) {
+    link.addEventListener('click', function () {
+      ativarAba($('#aba-' + link.dataset.aba));
+    });
+  });
+
+  /* Pedido: os itens escolhidos viram a mensagem do WhatsApp */
+  var dialogoPedido = $('#pedido');
+  var listaPedido = $('#pedido-lista');
+  var enviarPedido = $('#pedido-enviar');
+  var fecharBtn = $('#pedido-fechar');
+  var erroPedido = $('#pedido-erro');
+  var obsPedido = $('#pedido-obs');
+  var flutuante = $('.flutuante');
+  var flutuanteTexto = $('span', flutuante);
+  var pedidoLinhas = [];
+  var ICONE_MAIS = '<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 8h12M8 2v12"/></svg>';
+  var ICONE_MENOS = '<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M2 8h12"/></svg>';
+
+  function formatarPreco(centavos) {
+    return 'R$ ' + (centavos / 100).toFixed(2).replace('.', ',');
+  }
+
+  function criarControle(linha) {
+    var caixa = document.createElement('div');
+    caixa.className = 'qtd';
+    caixa.innerHTML = '<button class="qtd__btn qtd__menos" type="button">' + ICONE_MENOS + '</button>' +
+      '<span class="qtd__n"></span>' +
+      '<button class="qtd__btn qtd__mais" type="button">' + ICONE_MAIS + '</button>';
+    var menos = $('.qtd__menos', caixa);
+    var mais = $('.qtd__mais', caixa);
+    menos.setAttribute('aria-label', 'Tirar uma unidade de ' + linha.nome);
+    mais.setAttribute('aria-label', 'Adicionar ' + linha.nome);
+    menos.addEventListener('click', function () { alterarItem(linha, -1); });
+    mais.addEventListener('click', function () { alterarItem(linha, 1); });
+    return caixa;
+  }
+
+  function alterarItem(linha, passo) {
+    var saiuComFoco = linha.li.contains(document.activeElement);
+    var novoItem = !linha.qtd;
+    linha.qtd += passo;
+    if (novoItem) {
+      pedidoLinhas.push(linha);
+      listaPedido.appendChild(linha.li);
+    }
+    if (!linha.qtd) {
+      pedidoLinhas.splice(pedidoLinhas.indexOf(linha), 1);
+      linha.li.remove();
+      if (saiuComFoco) fecharBtn.focus();
+      if (linha.controle.contains(document.activeElement)) $('.qtd__mais', linha.controle).focus();
+    }
+    [linha.controle, linha.controleLista].forEach(function (caixa) {
+      caixa.classList.toggle('ativo', linha.qtd > 0);
+      $('.qtd__n', caixa).textContent = linha.qtd;
+    });
+    linha.subtotal.textContent = isNaN(linha.preco) ? '' : formatarPreco(linha.qtd * linha.preco);
+    atualizarPedido();
+    if (passo > 0 && !reduzido) {
+      flutuante.animate([{ transform: 'scale(1)' }, { transform: 'scale(1.08)' }, { transform: 'scale(1)' }], { duration: 280, easing: EASE });
+    }
+  }
+
+  function escolhido(nome) {
+    var marcada = $('input[name="' + nome + '"]:checked', dialogoPedido);
+    return marcada ? marcada.value : '';
+  }
+
+  function valorCampo(id) {
+    return $('#pedido-' + id).value.trim();
+  }
+
+  /* Primeiro dado que falta, com o campo que recebe o foco */
+  function faltaNoPedido() {
+    var tipo = escolhido('tipo');
+    if (!tipo) return { campo: $('input[name="tipo"]', dialogoPedido), aviso: 'Escolha retirada ou entrega.' };
+    if (!escolhido('casa')) return { campo: $('input[name="casa"]', dialogoPedido), aviso: 'Escolha a casa do pedido.' };
+    if (!valorCampo('nome')) return { campo: $('#pedido-nome'), aviso: 'Informe seu nome.' };
+    if (tipo === 'entrega' && !valorCampo('endereco')) return { campo: $('#pedido-endereco'), aviso: 'Informe o endereço de entrega.' };
+    return null;
+  }
+
+  function atualizarMensagem() {
+    var casa = escolhido('casa');
+    var tipo = escolhido('tipo');
+    var entrega = tipo === 'entrega';
+    var obs = obsPedido.value.trim();
+    var referencia = valorCampo('referencia');
+    var cliente = ['Nome: ' + valorCampo('nome')];
+    if (entrega) cliente.push('Endereço: ' + valorCampo('endereco'));
+    if (entrega && referencia) cliente.push('Referência: ' + referencia);
+    $('#pedido-entrega').hidden = !entrega;
+    $('#pedido-nota').textContent = entrega
+      ? 'O valor final e a taxa de entrega são confirmados pela casa no WhatsApp.'
+      : 'O valor final é confirmado pela casa no WhatsApp.';
+    /* Só soma se todos os itens tiverem preço */
+    var comPreco = pedidoLinhas.every(function (l) { return !isNaN(l.preco); });
+    var total = pedidoLinhas.reduce(function (soma, l) { return soma + l.qtd * l.preco; }, 0);
+    $('#pedido-resumo').hidden = !comPreco;
+    if (comPreco) $('#pedido-total').textContent = formatarPreco(total);
+    var texto = 'Olá, tudo bem? Gostaria de fazer um pedido' + (tipo ? ' para ' + tipo : '') + (casa ? ' na ' + casa : '') + ':\n\n' +
+      pedidoLinhas.map(function (l) {
+        return l.qtd + 'x ' + l.nome + (isNaN(l.preco) ? '' : ' - ' + formatarPreco(l.qtd * l.preco));
+      }).join('\n') +
+      (comPreco ? '\n\nTotal: ' + formatarPreco(total) : '') +
+      '\n\n' + cliente.join('\n') +
+      (obs ? '\n\nObservações: ' + obs : '') +
+      '\n\nPodem confirmar o valor e o tempo de preparo?';
+    enviarPedido.href = 'https://wa.me/5573998258544?text=' + encodeURIComponent(texto);
+    erroPedido.hidden = true;
+  }
+
+  function atualizarPedido() {
+    var total = pedidoLinhas.reduce(function (soma, l) { return soma + l.qtd; }, 0);
+    var rotulo = total ? 'Ver pedido (' + total + ')' : 'Pedir';
+    flutuante.classList.toggle('tem-pedido', total > 0);
+    flutuanteTexto.textContent = rotulo;
+    flutuante.setAttribute('aria-label', total ? rotulo : 'Pedir agora');
+    $('#pedido-status').textContent = total ? total + (total === 1 ? ' item no pedido' : ' itens no pedido') : 'Pedido vazio';
+    $('#pedido-vazio').hidden = total > 0;
+    $('#pedido-campos').hidden = !total;
+    $('#pedido-base').hidden = !total;
+    atualizarMensagem();
+  }
+
+  function fecharPedido() {
+    if (reduzido) { dialogoPedido.close(); return; }
+    dialogoPedido.classList.add('fechando');
+    setTimeout(function () {
+      dialogoPedido.classList.remove('fechando');
+      dialogoPedido.close();
+    }, 180);
+  }
+
+  $$('.item').forEach(function (item) {
+    var linha = { nome: $('.item__nome', item).textContent, qtd: 0 };
+    linha.preco = Math.round(parseFloat($('.item__preco', item).textContent.replace(/[^\d,]/g, '').replace(',', '.')) * 100);
+    linha.controle = criarControle(linha);
+    linha.controleLista = criarControle(linha);
+    linha.li = document.createElement('li');
+    linha.li.className = 'pedido__linha';
+    var rotulo = document.createElement('div');
+    rotulo.textContent = linha.nome;
+    linha.subtotal = document.createElement('span');
+    linha.subtotal.className = 'pedido__subtotal';
+    rotulo.appendChild(linha.subtotal);
+    linha.li.appendChild(rotulo);
+    linha.li.appendChild(linha.controleLista);
+    item.appendChild(linha.controle);
+  });
+
+  $$('[data-pedir]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      if (!pedidoLinhas.length) return;
+      e.preventDefault();
+      dialogoPedido.showModal();
+    });
+  });
+  fecharBtn.addEventListener('click', fecharPedido);
+  dialogoPedido.addEventListener('cancel', function (e) { e.preventDefault(); fecharPedido(); });
+  dialogoPedido.addEventListener('click', function (e) { if (e.target === dialogoPedido) fecharPedido(); });
+  dialogoPedido.addEventListener('input', atualizarMensagem);
+  enviarPedido.addEventListener('click', function (e) {
+    var falta = faltaNoPedido();
+    if (!falta) return;
+    e.preventDefault();
+    erroPedido.textContent = falta.aviso;
+    erroPedido.hidden = false;
+    falta.campo.focus();
+  });
+
+  /* Foto do item: mouse e teclado no desktop */
+  if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    $$('.item').forEach(function (item) {
+      item.tabIndex = 0;
+      item.addEventListener('mouseenter', function () { mostrarFoto(item); });
+      item.addEventListener('focus', function () { mostrarFoto(item); });
+    });
+    paineis.forEach(function (p) { p.removeAttribute('tabindex'); });
+  }
+
+  /* Carrossel de drinks: só anda quando a pessoa pede */
+  var trilho = $('#drinks-trilho');
+  var ant = $('#drinks-ant');
+  var prox = $('#drinks-prox');
+  function passo() {
+    var card = $('.drink', trilho);
+    return card.offsetWidth + parseFloat(getComputedStyle(trilho).columnGap || 0);
+  }
+  function andar(sentido) {
+    trilho.scrollBy({ left: sentido * passo(), behavior: reduzido ? 'auto' : 'smooth' });
+  }
+  function estadoCarrossel() {
+    var fim = trilho.scrollWidth - trilho.clientWidth - 2;
+    ant.disabled = trilho.scrollLeft <= 2;
+    prox.disabled = trilho.scrollLeft >= fim;
+  }
+  ant.addEventListener('click', function () { andar(-1); });
+  prox.addEventListener('click', function () { andar(1); });
+  trilho.addEventListener('scroll', estadoCarrossel, { passive: true });
+
+  /* Arrastar com o mouse; no toque o navegador já faz isso sozinho */
+  var arrasto = null;
+  function soltar() {
+    arrasto = null;
+    trilho.classList.remove('arrastando');
+  }
+  trilho.addEventListener('pointerdown', function (e) {
+    var naBarra = e.clientY - trilho.getBoundingClientRect().top >= trilho.clientHeight;
+    if (e.pointerType !== 'mouse' || e.button !== 0 || naBarra || secaoDrinks.classList.contains('fixar')) return;
+    arrasto = { x: e.clientX, inicio: trilho.scrollLeft, id: e.pointerId };
+  });
+  trilho.addEventListener('pointermove', function (e) {
+    if (!arrasto) return;
+    var distancia = e.clientX - arrasto.x;
+    if (!trilho.classList.contains('arrastando')) {
+      if (Math.abs(distancia) < 5) return;
+      trilho.classList.add('arrastando');
+      trilho.setPointerCapture(arrasto.id);
+    }
+    trilho.scrollLeft = arrasto.inicio - distancia;
+  });
+  ['pointerup', 'pointercancel', 'lostpointercapture'].forEach(function (evento) {
+    trilho.addEventListener(evento, soltar);
+  });
+  trilho.addEventListener('dragstart', function (e) { e.preventDefault(); });
+  addEventListener('resize', estadoCarrossel);
+  estadoCarrossel();
+
+  /* Palco dos drinks: com movimento reduzido ou tela baixa, fica o carrossel comum */
+  var secaoDrinks = $('#drinks');
+  var palco = $('.historias__palco');
+  var barraProgresso = $('.historias__progresso span');
+  var cartoes = $$('.drink', trilho);
+  var percurso = 0;
+  var alvoPalco = 0;
+  var atualPalco = 0;
+  var quadroPalco = null;
+
+  function desenharPalco() {
+    atualPalco += (alvoPalco - atualPalco) * 0.14;
+    if (Math.abs(alvoPalco - atualPalco) < 0.5) atualPalco = alvoPalco;
+    trilho.style.transform = 'translate3d(' + -atualPalco + 'px,0,0)';
+    barraProgresso.style.transform = 'scaleX(' + (percurso ? atualPalco / percurso : 0) + ')';
+    quadroPalco = atualPalco === alvoPalco ? null : requestAnimationFrame(desenharPalco);
+  }
+  function lerPalco() {
+    if (!percurso) return;
+    alvoPalco = Math.min(percurso, Math.max(0, -secaoDrinks.getBoundingClientRect().top));
+    if (!quadroPalco) quadroPalco = requestAnimationFrame(desenharPalco);
+  }
+  function medirPalco() {
+    var fixar = !reduzido && innerHeight >= 560;
+    secaoDrinks.classList.toggle('fixar', fixar);
+    trilho.style.transform = '';
+    secaoDrinks.style.height = '';
+    percurso = 0;
+    if (fixar) {
+      trilho.classList.remove('reveal', 'visivel');
+      trilho.removeAttribute('tabindex');
+      var largura = document.documentElement.clientWidth;
+      percurso = Math.max(0, cartoes[cartoes.length - 1].getBoundingClientRect().right + cartoes[0].getBoundingClientRect().left - largura);
+      secaoDrinks.style.height = palco.offsetHeight + percurso + 'px';
+      lerPalco();
+    } else {
+      trilho.tabIndex = 0;
+      estadoCarrossel();
+    }
+  }
+  addEventListener('scroll', lerPalco, { passive: true });
+  addEventListener('resize', medirPalco);
+  addEventListener('load', medirPalco);
+  medirPalco();
+
+  /* Revelação ao rolar */
+  var reveals = $$('.reveal');
+  if (reduzido) {
+    reveals.forEach(function (el) { el.classList.remove('reveal'); });
+  } else {
+    var observador = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('visivel');
+          observador.unobserve(e.target);
+          /* Libera o elemento para os estados de hover depois da entrada */
+          setTimeout(function () { e.target.classList.remove('reveal', 'visivel'); }, 1100);
+        }
+      });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    reveals.forEach(function (el) { observador.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>
