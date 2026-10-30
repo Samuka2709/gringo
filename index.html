@@ -412,6 +412,9 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
 .f-topo-dir{right:-70px;top:5%;transform:scaleX(-1) rotate(18deg)}
 .f-base-esq{left:-60px;bottom:3%;transform:rotate(152deg)}
 .f-base-dir{right:-60px;bottom:4%;transform:rotate(200deg)}
+.f-meio-esq,.f-meio-dir{width:clamp(120px,15vw,220px)}
+.f-meio-esq{left:-46px;top:46%;transform:rotate(-16deg)}
+.f-meio-dir{right:-46px;top:62%;transform:scaleX(-1) rotate(-24deg)}
 
 /* ---------- Botão flutuante ---------- */
 .flutuante{transition:transform var(--transicao);position:fixed;right:16px;bottom:max(16px,env(safe-area-inset-bottom));z-index:40;display:inline-flex;align-items:center;gap:.5rem;min-height:54px;padding:.5rem 1.25rem .5rem 1rem;border-radius:999px;background:var(--mostarda);color:var(--preto);font-weight:600;text-decoration:none;box-shadow:0 6px 20px rgba(20,20,20,.3)}
@@ -529,6 +532,7 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
   <section class="hero verde" id="topo" aria-labelledby="hero-titulo">
     <div class="hero__texto">
       <svg class="folha hero__folha" viewBox="0 0 200 246" aria-hidden="true" focusable="false"><use href="#costela"/></svg>
+      <svg class="folha espalhada f-topo-esq" viewBox="-6 -20 264 260" aria-hidden="true" focusable="false"><use href="#palmeira"/></svg>
       <h1 id="hero-titulo">Do primeiro café à última <em>fatia</em></h1>
       <p class="hero__sub">Pizza, Caffè e Almoço em Ilhéus</p>
       <div class="hero__acoes">
@@ -545,6 +549,8 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
   </section>
 
   <section class="secao creme" id="momentos" aria-labelledby="momentos-titulo">
+    <svg class="folha espalhada f-meio-esq" viewBox="-6 -20 264 260" aria-hidden="true" focusable="false"><use href="#palmeira"/></svg>
+    <svg class="folha espalhada f-meio-dir" viewBox="0 0 200 246" aria-hidden="true" focusable="false"><use href="#costela"/></svg>
     <svg class="folha espalhada f-topo-dir" viewBox="0 0 200 246" aria-hidden="true" focusable="false"><use href="#costela"/></svg>
     <svg class="folha espalhada f-base-esq" viewBox="-6 -20 264 260" aria-hidden="true" focusable="false"><use href="#palmeira"/></svg>
     <div class="container">
@@ -582,6 +588,7 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
 
   <section class="secao creme cardapio" id="cardapio" aria-labelledby="cardapio-titulo">
     <svg class="folha cardapio__folha" viewBox="0 0 200 246" aria-hidden="true" focusable="false"><use href="#costela"/></svg>
+    <svg class="folha espalhada f-meio-dir" viewBox="-6 -20 264 260" aria-hidden="true" focusable="false"><use href="#palmeira"/></svg>
     <svg class="folha espalhada f-base-esq" viewBox="-6 -20 264 260" aria-hidden="true" focusable="false"><use href="#palmeira"/></svg>
     <svg class="folha espalhada f-topo-dir" viewBox="0 0 200 246" aria-hidden="true" focusable="false"><use href="#costela"/></svg>
     <div class="container">
@@ -661,7 +668,8 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
                   <p class="item__desc">Tem cheiro de casa de vó. Com licença poética.</p>
                 </div>
               </li>
-              <li class="item" data-foto="Foto: pizza romeu e julieta, fatia servida no prato" data-src="">
+              <li class="item" data-foto="Pizza doce com queijo gratinado e fios de calda vermelha" data-src="img/romeu-julieta.webp">
+                <img class="item__mini" src="img/mini/romeu-julieta.webp" alt="" width="88" height="88" loading="lazy" decoding="async">
                 <div class="item__texto">
                   <div class="item__linha"><h4 class="item__nome">Romeu e Julieta</h4><span class="item__preco">R$ 48,90</span></div>
                   <p class="item__desc">Queijo e goiabada. Aqui a história termina bem.</p>
@@ -837,6 +845,8 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
   </div>
   <section class="secao verde rodizio" id="rodizio" aria-labelledby="rodizio-titulo">
     <svg class="folha rodizio__folha" viewBox="-6 -20 264 260" aria-hidden="true" focusable="false"><use href="#palmeira"/></svg>
+    <svg class="folha espalhada f-topo-esq" viewBox="-6 -20 264 260" aria-hidden="true" focusable="false"><use href="#palmeira"/></svg>
+    <svg class="folha espalhada f-meio-dir" viewBox="0 0 200 246" aria-hidden="true" focusable="false"><use href="#costela"/></svg>
     <svg class="folha espalhada f-base-esq" viewBox="0 0 200 246" aria-hidden="true" focusable="false"><use href="#costela"/></svg>
     <div class="container rodizio__grade">
       <div class="reveal">
@@ -861,6 +871,8 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
 
   <section class="secao creme bambini" id="bambini" aria-labelledby="bambini-titulo">
     <svg class="folha bambini__folha" viewBox="0 0 200 246" aria-hidden="true" focusable="false"><use href="#costela"/></svg>
+    <svg class="folha espalhada f-meio-esq" viewBox="0 0 200 246" aria-hidden="true" focusable="false"><use href="#costela"/></svg>
+    <svg class="folha espalhada f-base-dir" viewBox="-6 -20 264 260" aria-hidden="true" focusable="false"><use href="#palmeira"/></svg>
     <svg class="folha espalhada f-base-esq" viewBox="-6 -20 264 260" aria-hidden="true" focusable="false"><use href="#palmeira"/></svg>
     <div class="container bambini__grade">
       <div class="bambini__fotos reveal">
@@ -898,6 +910,7 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
 
   <section class="secao noite historias" id="drinks" aria-labelledby="drinks-titulo">
     <div class="historias__palco">
+      <svg class="folha espalhada f-base-esq" viewBox="0 0 200 246" aria-hidden="true" focusable="false"><use href="#costela"/></svg>
       <svg class="folha espalhada f-topo-dir" viewBox="-6 -20 264 260" aria-hidden="true" focusable="false"><use href="#palmeira"/></svg>
     <div class="container historias__topo reveal">
       <div>
@@ -959,6 +972,7 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
   </section>
 
   <section class="secao creme prova" id="prova" aria-labelledby="prova-titulo">
+    <svg class="folha espalhada f-meio-dir" viewBox="-6 -20 264 260" aria-hidden="true" focusable="false"><use href="#palmeira"/></svg>
     <svg class="folha espalhada f-topo-esq" viewBox="-6 -20 264 260" aria-hidden="true" focusable="false"><use href="#palmeira"/></svg>
     <svg class="folha espalhada f-base-dir" viewBox="0 0 200 246" aria-hidden="true" focusable="false"><use href="#costela"/></svg>
     <div class="container">
@@ -988,6 +1002,8 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
   </section>
 
   <section class="secao verde unidades" id="unidades" aria-labelledby="unidades-titulo">
+    <svg class="folha espalhada f-meio-esq" viewBox="0 0 200 246" aria-hidden="true" focusable="false"><use href="#costela"/></svg>
+    <svg class="folha espalhada f-base-dir" viewBox="-6 -20 264 260" aria-hidden="true" focusable="false"><use href="#palmeira"/></svg>
     <svg class="folha espalhada f-topo-dir" viewBox="0 0 200 246" aria-hidden="true" focusable="false"><use href="#costela"/></svg>
     <svg class="folha espalhada f-base-esq" viewBox="-6 -20 264 260" aria-hidden="true" focusable="false"><use href="#palmeira"/></svg>
     <div class="container">
@@ -1035,6 +1051,7 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
 </main>
 
 <footer class="verde rodape">
+  <svg class="folha espalhada f-base-esq" viewBox="0 0 200 246" aria-hidden="true" focusable="false"><use href="#costela"/></svg>
   <svg class="folha espalhada f-topo-dir" viewBox="-6 -20 264 260" aria-hidden="true" focusable="false"><use href="#palmeira"/></svg>
   <div class="rodape__faixa" aria-hidden="true"></div>
   <div class="container">

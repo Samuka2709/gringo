@@ -33,7 +33,7 @@ Em img/mini/ estão as miniaturas do cardápio no celular (176x176), com o mesmo
 | frango.webp | photo-1618213837799-25d5552820d3 | Frango com catupiry saindo do forno |
 | choco-morango.webp | photo-1601501077525-4fa2d0c40f48 | Pizza de chocolate com morango |
 | banana.webp | photo-1558467517-7fa8f7c76583 | Pizza de banana com canela polvilhada na hora |
-| (sem foto) | nenhuma | Romeu e Julieta: não achei foto fiel; o espaço mostra a legenda até a foto real chegar |
+| romeu-julieta.webp | photo-1628840045720-3a800b89d353 | Romeu e Julieta: foto aproximada, com queijo e calda vermelha. Troque por uma foto real da pizza com goiabada |
 | ex-frango.webp | photo-1593787614839-9b93c8998f25 | Prato executivo de frango |
 | ex-carne.webp | photo-1786052599586-344b949de861 | Prato executivo de carne |
 | ex-peixe.webp | photo-1532550907401-a500c9a57435 | Prato executivo de peixe |
