@@ -16,7 +16,6 @@ Em img/mini/ estão as miniaturas do cardápio no celular (176x176), com o mesmo
 | cafe.webp | photo-1505148454817-2fb30960599d | Xícara de café na mesa de madeira, luz da manhã |
 | almoco.webp | photo-1625862692743-3f57873bb37c | Prato do almoço executivo na mesa, plantas ao fundo |
 | pizza-drinks.webp | photo-1688966601042-a7a794a2cdac | Pizza e drink lado a lado, luz baixa da noite |
-| rodizio.webp | photo-1665765373094-42d956560af1 | Mesa do rodízio com várias pizzas |
 | playground.webp | photo-1596997000103-e597b3ca50df | Playground da área kids (crianças só com autorização dos responsáveis) |
 | oficina.webp | photo-1563107520-41225bf309fa | Crianças abrindo a massa na oficina (com autorização dos responsáveis) |
 | drink-jorge.webp | photo-1778104959337-5260c89e2293 | Drink Jorge Amado no balcão de madeira, fundo escuro |
@@ -24,7 +23,6 @@ Em img/mini/ estão as miniaturas do cardápio no celular (176x176), com o mesmo
 | drink-nacib.webp | photo-1778104959469-0861d423de46 | Drink real da carta |
 | drink-flor.webp | photo-1773188243990-b50e86881bd7 | Drink real da carta |
 | drink-ubaldo.webp | photo-1550426735-c33c7ce414ff | Drink real da carta |
-| casa-centro.webp | photo-1731909997813-f3061fe69686 | Fachada da Casa Centro, luz do dia |
 | casa-sul.webp | photo-1738323569089-9cde1c891a54 | Fachada da Casa Sul, luz do dia |
 | calabresa.webp | photo-1700760934249-93efbb574d23 | Pizza de calabresa sobre tábua de madeira, luz natural, folhagem ao fundo |
 | margherita.webp | photo-1598023696416-0193a0bcd302 | Margherita vista de cima |

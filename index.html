@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pizzaria e café em Ilhéus: Pizza, Caffè e Almoço</title>
-<meta name="description" content="Pizzaria e café em Ilhéus, Bahia. Pizza, Caffè e Almoço nas unidades Casa Centro e Casa Sul, com rodízio, área kids e drinks autorais.">
+<meta name="description" content="Pizzaria e café em Ilhéus, Bahia. Pizza, Caffè e Almoço na Casa Sul, com reservas para reunião, área kids e drinks autorais.">
 <meta name="theme-color" content="#1F3B2A">
 
 <!-- Quando o site tiver domínio, descomente e preencha:
@@ -14,7 +14,7 @@
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Pizzaria e café em Ilhéus">
 <meta property="og:title" content="Pizzaria e café em Ilhéus">
-<meta property="og:description" content="Pizza, Caffè e Almoço em Ilhéus. Duas casas, rodízio de pizza, espaço Bambini e drinks autorais.">
+<meta property="og:description" content="Pizza, Caffè e Almoço em Ilhéus. Reservas para reunião, espaço Bambini e drinks autorais.">
 <meta property="og:url" content="[URL DO SITE]">
 <meta property="og:image" content="[URL DO SITE]/img/og.jpg">
 
@@ -38,23 +38,6 @@
       "slogan": "Pizza, Caffè e Almoço",
       "url": "[URL DO SITE]",
       "sameAs": ["https://www.instagram.com/gringa.casa/"]
-    },
-    {
-      "@type": "Restaurant",
-      "name": "Casa Centro",
-      "parentOrganization": { "@id": "#casa" },
-      "servesCuisine": ["Pizza", "Café"],
-      "url": "[URL DO SITE]",
-      "telephone": "[TELEFONE CASA CENTRO]",
-      "openingHours": "[HORÁRIO CASA CENTRO]",
-      "priceRange": "[FAIXA DE PREÇO]",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "[ENDEREÇO CASA CENTRO]",
-        "addressLocality": "Ilhéus",
-        "addressRegion": "BA",
-        "addressCountry": "BR"
-      }
     },
     {
       "@type": "Restaurant",
@@ -297,22 +280,23 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
   .item:hover .item__nome,.item:focus-visible .item__nome{font-style:italic}
 }
 
-/* ---------- Rodízio ---------- */
-.rodizio{padding-block:clamp(64px,9vw,120px)}
-.rodizio__foto{--ar:16/10}
-@media (min-width:768px){.rodizio__foto{--ar:5/2}}
-.rodizio__folha{right:-70px;top:-30px;width:clamp(260px,34vw,460px);color:var(--creme);opacity:.05}
-.rodizio__grade{position:relative;display:grid;gap:var(--esp-4)}
-.rodizio h2{font-size:clamp(2.5rem,1.5rem + 4.6vw,5.25rem)}
-.rodizio h2 em{display:block;color:var(--mostarda)}
-.rodizio .mao{margin-top:var(--esp-2);color:var(--texto-suave-escuro)}
-.preco{display:flex;align-items:flex-start;gap:.35rem;font-family:var(--font-titulo);font-size:clamp(5.5rem,3.5rem + 9vw,8.5rem);font-weight:300;line-height:.86;letter-spacing:-.03em}
-.preco__moeda{font-size:.3em;line-height:1;letter-spacing:0;padding-top:.32em}
-.preco__nota{margin-top:var(--esp-2);padding-bottom:.55rem;border-bottom:2px solid var(--mostarda);font-weight:600}
-.condicoes{margin-block:var(--esp-2) var(--esp-3);font-size:.9375rem;color:var(--texto-suave-escuro)}
-.condicoes li{padding-block:.3rem}
+/* ---------- Reservas ---------- */
+.reservas{padding-block:clamp(64px,9vw,120px)}
+.reservas__folha{right:-70px;top:-30px;width:clamp(260px,34vw,460px);color:var(--creme);opacity:.05}
+.reservas__grade{position:relative;display:grid;gap:var(--esp-4)}
+.reservas h2{font-size:clamp(2.5rem,1.5rem + 4.6vw,5.25rem)}
+.reservas h2 em{display:block;color:var(--mostarda)}
+.reservas .mao{margin-top:var(--esp-2);color:var(--texto-suave-escuro)}
+.reservas .lead{margin-top:var(--esp-2)}
+.reserva{--foco:var(--verde);padding:clamp(1.25rem,3vw,2rem);background:var(--creme);color:var(--preto)}
+.reserva [hidden]{display:none}
+.reserva .pedido__campo{margin-top:var(--esp-2)}
+.reserva>.pedido__campo:first-child{margin-top:0}
+.reserva__linha{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:0 .75rem}
+.reserva__erro{margin-top:var(--esp-2);margin-bottom:0}
+.reserva__enviar{width:100%;margin-top:var(--esp-2)}
 @media (min-width:900px){
-  .rodizio__grade{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:var(--esp-5);align-items:end}
+  .reservas__grade{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:var(--esp-5);align-items:center}
 }
 
 /* ---------- Bambini ---------- */
@@ -390,7 +374,14 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
 .unidade__acoes{display:flex;flex-wrap:wrap;gap:.75rem}
 .unidade__acoes .btn{flex:1 1 150px}
 .unidade .btn--contorno{color:var(--verde)}
-@media (min-width:768px){.unidades__lista{grid-template-columns:repeat(2,1fr)}}
+.unidades__mapa{position:relative;margin-top:clamp(20px,3vw,32px)}
+.unidades__mapa iframe{display:block;width:100%;height:clamp(280px,38vw,420px);border:0;background:var(--verde-claro)}
+.unidades__mapa figcaption{margin-top:.625rem;font-size:.875rem;color:var(--texto-suave-escuro)}
+@media (min-width:768px){
+  .unidade{display:grid;grid-template-columns:1fr 1fr}
+  .unidade .foto{aspect-ratio:auto;height:100%}
+  .unidade__corpo{align-self:center}
+}
 
 /* ---------- Rodapé ---------- */
 .rodape{position:relative;padding-bottom:calc(var(--esp-5) + 40px);overflow:hidden}
@@ -496,7 +487,6 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
 
   COMO TROCAR OS LINKS
   Procure por wa.me/5573998258544. A mensagem pronta fica depois de ?text=, codificada para URL.
-  Se cada casa tiver um número, troque nos botões de WhatsApp das unidades.
 -->
 
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -517,10 +507,10 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
     <nav class="site-nav" id="nav-principal" aria-label="Principal">
       <ul class="site-nav__lista">
         <li><a href="#cardapio">Cardápio</a></li>
-        <li><a href="#rodizio">Rodízio</a></li>
+        <li><a href="#reservas">Reservas</a></li>
         <li><a href="#bambini">Bambini</a></li>
         <li><a href="#drinks">Drinks</a></li>
-        <li><a href="#unidades">Unidades</a></li>
+        <li><a href="#unidades">Onde estamos</a></li>
       </ul>
       <a class="btn btn--primario" data-pedir href="https://wa.me/5573998258544?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20fazer%20um%20pedido.%20Podem%20me%20ajudar%20com%20as%20op%C3%A7%C3%B5es%20dispon%C3%ADveis%20e%20o%20tempo%20de%20preparo%3F" target="_blank" rel="noopener">Pedir agora</a>
     </nav>
@@ -537,7 +527,7 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
       <p class="hero__sub">Pizza, Caffè e Almoço em Ilhéus</p>
       <div class="hero__acoes">
         <a class="btn btn--primario" href="#cardapio">Ver cardápio</a>
-        <a class="btn btn--contorno" href="#unidades">Escolher unidade</a>
+        <a class="btn btn--contorno" href="#unidades">Ver endereço</a>
       </div>
     </div>
     <div class="foto hero__foto">
@@ -840,31 +830,43 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
   </section>
 
   <div class="madeira"></div>
-  <div class="foto rodizio__foto">
-    <img src="img/rodizio.webp" alt="Pizzas com rúcula e tomate servidas lado a lado" width="1800" height="720" loading="lazy" decoding="async">
-  </div>
-  <section class="secao verde rodizio" id="rodizio" aria-labelledby="rodizio-titulo">
-    <svg class="folha rodizio__folha" viewBox="-6 -20 264 260" aria-hidden="true" focusable="false"><use href="#palmeira"/></svg>
+  <section class="secao verde reservas" id="reservas" aria-labelledby="reservas-titulo">
+    <svg class="folha reservas__folha" viewBox="-6 -20 264 260" aria-hidden="true" focusable="false"><use href="#palmeira"/></svg>
     <svg class="folha espalhada f-topo-esq" viewBox="-6 -20 264 260" aria-hidden="true" focusable="false"><use href="#palmeira"/></svg>
     <svg class="folha espalhada f-meio-dir" viewBox="0 0 200 246" aria-hidden="true" focusable="false"><use href="#costela"/></svg>
     <svg class="folha espalhada f-base-esq" viewBox="0 0 200 246" aria-hidden="true" focusable="false"><use href="#costela"/></svg>
-    <div class="container rodizio__grade">
+    <div class="container reservas__grade">
       <div class="reveal">
-        <h2 id="rodizio-titulo">Vocês têm rodízio? <em>Agora sim!</em></h2>
-        <p class="mao">Ninguém aqui conta as fatias. Nem você.</p>
+        <h2 id="reservas-titulo">Reunião marcada? <em>A mesa também.</em></h2>
+        <p class="mao">Café na mesa, pauta em dia.</p>
+        <p class="lead">Reserve um espaço para sua reunião. A casa confirma pelo WhatsApp.</p>
       </div>
-      <div class="reveal" style="--d:90ms">
-        <!-- EDITAR: preço do rodízio. Este é o único lugar do site onde o valor aparece. -->
-        <p class="preco"><span class="preco__moeda">R$</span><span id="preco-rodizio">64</span></p>
-        <p class="preco__nota">Preço promocional, por pessoa acima de 10 anos</p>
-        <ul class="condicoes">
-          <li><span class="ph">[DIAS E HORÁRIOS DO RODÍZIO]</span></li>
-          <li><span class="ph">[UNIDADES PARTICIPANTES]</span></li>
-          <li><span class="ph">[CONDIÇÃO PARA CRIANÇAS DE ATÉ 10 ANOS]</span></li>
-          <li><span class="ph">[VALIDADE DA PROMOÇÃO]</span></li>
-        </ul>
-        <a class="btn btn--primario" href="#unidades">Escolher unidade</a>
-      </div>
+      <form class="reserva reveal" id="reserva" style="--d:90ms" action="https://wa.me/5573998258544" method="get" target="_blank" novalidate>
+        <label class="pedido__campo">
+          <span>Seu nome</span>
+          <input id="reserva-nome" type="text" maxlength="80" autocomplete="name">
+        </label>
+        <div class="reserva__linha">
+          <label class="pedido__campo">
+            <span>Data</span>
+            <input id="reserva-data" type="date">
+          </label>
+          <label class="pedido__campo">
+            <span>Horário</span>
+            <input id="reserva-hora" type="time">
+          </label>
+        </div>
+        <label class="pedido__campo">
+          <span>Número de pessoas</span>
+          <input id="reserva-pessoas" type="number" min="1" max="200" inputmode="numeric">
+        </label>
+        <label class="pedido__campo">
+          <span>Alguma observação? (opcional)</span>
+          <textarea id="reserva-obs" rows="2" maxlength="300"></textarea>
+        </label>
+        <p class="pedido__erro reserva__erro" id="reserva-erro" role="alert" hidden></p>
+        <button class="btn btn--primario reserva__enviar" type="submit">Reservar pelo WhatsApp</button>
+      </form>
     </div>
   </section>
   <div class="madeira"></div>
@@ -1008,27 +1010,11 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
     <svg class="folha espalhada f-base-esq" viewBox="-6 -20 264 260" aria-hidden="true" focusable="false"><use href="#palmeira"/></svg>
     <div class="container">
       <div class="unidades__topo reveal">
-        <h2 id="unidades-titulo">Duas casas. <em>Escolha a mais perto da sua fome.</em></h2>
-        <p class="lead">Casa Centro e Casa Sul. Morando aqui ou de passagem, tem mesa.</p>
+        <h2 id="unidades-titulo">Casa Sul. <em>A mais perto da sua fome.</em></h2>
+        <p class="lead">Morando aqui ou de passagem, tem mesa.</p>
       </div>
       <div class="unidades__lista">
         <article class="unidade card reveal">
-          <div class="foto foto--madeira" style="--ar:16/10">
-            <img src="img/casa-centro.webp" alt="Entrada de madeira cercada de plantas, com bancos altos" width="800" height="500" loading="lazy" decoding="async">
-          </div>
-          <div class="unidade__corpo">
-            <h3>Casa Centro</h3>
-            <dl class="unidade__dados">
-              <div><dt>Endereço</dt><dd class="ph">[ENDEREÇO CASA CENTRO]</dd></div>
-              <div><dt>Horário</dt><dd class="ph">[HORÁRIO CASA CENTRO]</dd></div>
-            </dl>
-            <div class="unidade__acoes">
-              <a class="btn btn--primario" href="https://www.google.com/maps/search/?api=1&amp;query=GRINGA%20Casa%20Centro%20Ilh%C3%A9us%20BA" target="_blank" rel="noopener">Como chegar</a>
-              <a class="btn btn--contorno" href="https://wa.me/5573998258544?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20falar%20com%20a%20Casa%20Centro.%20Podem%20me%20informar%20o%20hor%C3%A1rio%20de%20hoje%20e%20se%20h%C3%A1%20mesa%20dispon%C3%ADvel%3F" target="_blank" rel="noopener" aria-label="WhatsApp da Casa Centro">WhatsApp</a>
-            </div>
-          </div>
-        </article>
-        <article class="unidade card reveal" style="--d:90ms">
           <div class="foto" style="--ar:16/10">
             <img src="img/casa-sul.webp" alt="Balcão de madeira com plantas e luminárias pendentes" width="800" height="500" loading="lazy" decoding="async">
           </div>
@@ -1039,12 +1025,16 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
               <div><dt>Horário</dt><dd class="ph">[HORÁRIO CASA SUL]</dd></div>
             </dl>
             <div class="unidade__acoes">
-              <a class="btn btn--primario" href="https://www.google.com/maps/search/?api=1&amp;query=GRINGA%20Casa%20Sul%20Ilh%C3%A9us%20BA" target="_blank" rel="noopener">Como chegar</a>
+              <a class="btn btn--primario" href="https://www.google.com/maps/search/?api=1&amp;query=Ilh%C3%A9us%20BA" target="_blank" rel="noopener">Como chegar</a>
               <a class="btn btn--contorno" href="https://wa.me/5573998258544?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20falar%20com%20a%20Casa%20Sul.%20Podem%20me%20informar%20o%20hor%C3%A1rio%20de%20hoje%20e%20se%20h%C3%A1%20mesa%20dispon%C3%ADvel%3F" target="_blank" rel="noopener" aria-label="WhatsApp da Casa Sul">WhatsApp</a>
             </div>
           </div>
         </article>
       </div>
+      <figure class="unidades__mapa">
+        <iframe src="https://www.google.com/maps?q=Ilh%C3%A9us%2C%20BA&amp;z=13&amp;output=embed" title="Mapa da região de Ilhéus" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <figcaption>Mapa ilustrativo da região. O endereço exato será informado em breve.</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -1071,7 +1061,6 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
       <div>
         <h2>Horários</h2>
         <ul>
-          <li>Casa Centro: <span class="ph">[HORÁRIO RESUMIDO CASA CENTRO]</span></li>
           <li>Casa Sul: <span class="ph">[HORÁRIO RESUMIDO CASA SUL]</span></li>
         </ul>
       </div>
@@ -1096,13 +1085,6 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
         <div class="pedido__casas">
           <label class="escolha"><input type="radio" name="tipo" value="retirada"><span>Retirada</span></label>
           <label class="escolha"><input type="radio" name="tipo" value="entrega"><span>Entrega</span></label>
-        </div>
-      </fieldset>
-      <fieldset class="pedido__casa">
-        <legend>Em qual casa?</legend>
-        <div class="pedido__casas">
-          <label class="escolha"><input type="radio" name="casa" value="Casa Centro"><span>Casa Centro</span></label>
-          <label class="escolha"><input type="radio" name="casa" value="Casa Sul"><span>Casa Sul</span></label>
         </div>
       </fieldset>
       <label class="pedido__campo">
@@ -1432,14 +1414,12 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
   function faltaNoPedido() {
     var tipo = escolhido('tipo');
     if (!tipo) return { campo: $('input[name="tipo"]', dialogoPedido), aviso: 'Escolha retirada ou entrega.' };
-    if (!escolhido('casa')) return { campo: $('input[name="casa"]', dialogoPedido), aviso: 'Escolha a casa do pedido.' };
     if (!valorCampo('nome')) return { campo: $('#pedido-nome'), aviso: 'Informe seu nome.' };
     if (tipo === 'entrega' && !valorCampo('endereco')) return { campo: $('#pedido-endereco'), aviso: 'Informe o endereço de entrega.' };
     return null;
   }
 
   function atualizarMensagem() {
-    var casa = escolhido('casa');
     var tipo = escolhido('tipo');
     var entrega = tipo === 'entrega';
     var obs = obsPedido.value.trim();
@@ -1456,7 +1436,7 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
     var total = pedidoLinhas.reduce(function (soma, l) { return soma + l.qtd * l.preco; }, 0);
     $('#pedido-resumo').hidden = !comPreco;
     if (comPreco) $('#pedido-total').textContent = formatarPreco(total);
-    var texto = 'Olá, tudo bem? Gostaria de fazer um pedido' + (tipo ? ' para ' + tipo : '') + (casa ? ' na ' + casa : '') + ':\n\n' +
+    var texto = 'Olá, tudo bem? Gostaria de fazer um pedido' + (tipo ? ' para ' + tipo : '') + ' na Casa Sul:\n\n' +
       pedidoLinhas.map(function (l) {
         return l.qtd + 'x ' + l.nome + (isNaN(l.preco) ? '' : ' - ' + formatarPreco(l.qtd * l.preco));
       }).join('\n') +
@@ -1525,6 +1505,43 @@ h3{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);line-height:1.15}
     erroPedido.textContent = falta.aviso;
     erroPedido.hidden = false;
     falta.campo.focus();
+  });
+
+  /* Reserva para reunião: os dados viram a mensagem do WhatsApp */
+  var formReserva = $('#reserva');
+  var erroReserva = $('#reserva-erro');
+  var campoData = $('#reserva-data');
+  var hoje = new Date();
+  campoData.min = new Date(hoje.getTime() - hoje.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+
+  function faltaNaReserva() {
+    if (!$('#reserva-nome').value.trim()) return { campo: $('#reserva-nome'), aviso: 'Informe seu nome.' };
+    if (!campoData.value) return { campo: campoData, aviso: 'Escolha a data da reunião.' };
+    if (campoData.value < campoData.min) return { campo: campoData, aviso: 'Escolha uma data a partir de hoje.' };
+    if (!$('#reserva-hora').value) return { campo: $('#reserva-hora'), aviso: 'Escolha o horário da reunião.' };
+    if (!(parseInt($('#reserva-pessoas').value, 10) > 0)) return { campo: $('#reserva-pessoas'), aviso: 'Informe o número de pessoas.' };
+    return null;
+  }
+
+  formReserva.addEventListener('input', function () { erroReserva.hidden = true; });
+  formReserva.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var falta = faltaNaReserva();
+    if (falta) {
+      erroReserva.textContent = falta.aviso;
+      erroReserva.hidden = false;
+      falta.campo.focus();
+      return;
+    }
+    var obs = $('#reserva-obs').value.trim();
+    var texto = 'Olá, tudo bem? Gostaria de reservar um espaço para reunião na Casa Sul.\n\n' +
+      'Nome: ' + $('#reserva-nome').value.trim() + '\n' +
+      'Data: ' + campoData.value.split('-').reverse().join('/') + '\n' +
+      'Horário: ' + $('#reserva-hora').value + '\n' +
+      'Pessoas: ' + parseInt($('#reserva-pessoas').value, 10) +
+      (obs ? '\n\nObservações: ' + obs : '') +
+      '\n\nPodem confirmar a disponibilidade?';
+    window.open('https://wa.me/5573998258544?text=' + encodeURIComponent(texto), '_blank', 'noopener');
   });
 
   /* Foto do item: mouse e teclado no desktop */
